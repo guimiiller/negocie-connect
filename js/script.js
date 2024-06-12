@@ -3,34 +3,12 @@ const negocieCircle = document.querySelector('.negocie-circle');
 const imgAnimation1 = document.getElementById('imgAnimation1');
 const imgAnimation2 = document.getElementById('imgAnimation2');
 
-if (negocieBtn) {
-    negocieBtn.addEventListener('click', () => {
-        console.log('Button clicked');
-
-        imgAnimation1.classList.toggle('visible');
-        imgAnimation2.classList.toggle('visible');
-
-        if (imgAnimation1.classList.contains('visible')) {
-            imgAnimation1.classList.add('animate-left');
-            imgAnimation2.classList.add('animate-right');
-        } else {
-            imgAnimation1.classList.remove('animate-left');
-            imgAnimation2.classList.remove('animate-right');
-        }
-
-        negocieCircle.classList.toggle('animate-scale');
-    });
-} else {
-    console.error('negocieBtn not found');
-}
-
 
 const preloader = document.getElementById('preloader');
 
 window.addEventListener('load', () => {
     preloader.style.display = 'none';
 });
-
 
 
 
