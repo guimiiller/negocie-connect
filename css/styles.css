@@ -354,33 +354,80 @@
 }
 
 .banner-text img{
-    width: 155px;
-    height: 159px;
+    width: 150px;
+    height: 120px;
     margin-left: 20px;
 }
 
 .banner-text p{
-    background-color: #0582CA;
+    background-color: transparent;
+    border: 2px solid #0582CA;
+    color: #FFF;
     width: 206.51px;
     height: 30.29px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 5px;
+    margin-bottom: 30px;
+}
+
+.banner-title{
+    max-width: 178px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .banner-text h1{
-    font-size: 55px;
+    font-size: 37px;
     color: #0582CA;
     font-weight: 500;
-    margin: 32px 0 37px 0;
+    text-align: center;
+    line-height: 45px;
+    font-weight: bold;
 }
 
 .banner-text h2{
-    font-size: 20px;
-    color: #00A6FB;
-    line-height: 30px;
+    font-size: 17px;
+    color: #0582CA;
+    font-weight: 500;
+    margin-bottom: 8px;
+    text-align: center;
+    font-weight: 500;
 }
+
+.banner-text h3{
+    font-size: 17px;
+    color: #fff;
+    margin-top: 10px;
+    line-height: 27px;
+    text-transform: uppercase;
+}
+
+.banner-text h4{
+    font-size: 15px;
+    color: #FFF;
+    margin-top: 20px;
+}
+
+.banner-text h5{
+    font-size: 15px;
+    color: #FFF;
+    margin-top: 20px;
+}
+
+.banner-text h6{
+    font-size: 17px;
+    color: #FFF;
+    margin-top: 20px;
+}
+
+h3 span, h4 span, h5 span, h6 span {
+    color: #0582CA;
+}
+
 
 .box{
     color: white;
@@ -465,22 +512,59 @@ fieldset{
     .banner-container{
         flex-direction: column;
     }
+    
+    .banner-text img{
+        width: 120px;
+        height: 110px;
+        margin-left: 20px;
+    }
 
     .banner-text{
         display: flex;
         align-items: center;
         justify-content: center;
-        text-align: center;
         flex-direction: column;
         margin: 0;
-        padding-top: 50px;
-        padding-bottom: 20px;
+        padding: 20px 10px;
+    }
+
+    .banner-text h1{
+        font-size: 33px;
+    }
+
+    .banner-text h2{
+        font-size: 16px;
+    }
+
+    .banner-text h3{
+        text-align: center;
+    }
+
+    .banner-text h4{
+        text-align: center;
+        font-size: 15px;
+    }
+
+    .banner-text h5{
+        text-align: center;
+        font-size: 15px;
+    }
+
+    .banner-text h6{
+        text-align: center;
+        margin-top: 50px;
+        font-size: 15px;
     }
 
     .box{
         max-width: 100%;
         padding: 0 20px;
         margin-top: 50px;
+    }
+
+    
+    .banner-text img{
+        margin: 0;
     }
 }
 
@@ -492,6 +576,27 @@ fieldset{
 
     .banner-text h2{
         font-size: 16px;
+    }
+
+    .banner-text h3{
+        text-align: center;
+        font-size: 15px;
+    }
+
+    .banner-text h4{
+        text-align: center;
+        font-size: 13px;
+    }
+
+    .banner-text h5{
+        text-align: center;
+        font-size: 13px;
+    }
+
+    .banner-text h6{
+        text-align: center;
+        margin-top: 50px;
+        font-size: 15px;
     }
 
     .banner-text img{
