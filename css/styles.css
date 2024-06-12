@@ -124,7 +124,7 @@
     background-color: #0582CA;
 }
 
-/* Responsividade */
+
 @media (max-width: 1200px) {
     .navigation ul li {
         margin-right: 40px;
@@ -196,10 +196,8 @@
 }
 
 
-/* Estilos Gerais */
-/* Estilos Gerais */
 .header-small {
-    display: none; /* Ocultado por padrão */
+    display: none; 
     align-items: center;
     justify-content: center;
     padding-top: 20px;
@@ -261,7 +259,7 @@
     height: 60px;
 }
 
-/* Media Queries */
+
 @media (max-width: 785px) {
     .header-large {
         display: none;
@@ -420,11 +418,11 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: #14161D; /* Background color of preloader */
+    background: #14161D;
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 9999; /* Ensure it covers everything else */
+    z-index: 9999;
 }
 
 .loader {
@@ -550,13 +548,13 @@ fieldset{
     background-color: #0582CA;
     border: none;
     border-radius: 5px;
-    transition: box-shadow 0.3s ease; /* Adiciona uma transição suave */
+    transition: box-shadow 0.3s ease; 
     cursor: pointer;
     font-size: 16px;
 }
 
 .subscribe-btn:hover {
-    box-shadow: 0 0 10px 5px rgba(5, 130, 202, 0.5); /* Adiciona um efeito de brilho */
+    box-shadow: 0 0 10px 5px rgba(5, 130, 202, 0.5); 
 }
 
 
@@ -700,7 +698,7 @@ fieldset{
     width: 100%;
     background-color: #0F0F0F;
     border-radius: 20px;
-    box-shadow: 0 0 20px rgba(5, 130, 202, 0.5); /* Adiciona uma sombra difusa */
+    box-shadow: 0 0 20px rgba(5, 130, 202, 0.5);
     margin-top: 65px;
     display: flex;
     align-items: center;
@@ -760,12 +758,12 @@ fieldset{
     border: none;
     border-radius: 5px;
     margin: 20px 0 0 400px;
-    transition: box-shadow 0.3s ease; /* Adiciona uma transição suave */
+    transition: box-shadow 0.3s ease; 
     cursor: pointer;
 }
 
 .about-content button:hover {
-    box-shadow: 0 0 10px 5px rgba(5, 130, 202, 0.5); /* Adiciona um efeito de brilho */
+    box-shadow: 0 0 10px 5px rgba(5, 130, 202, 0.5); 
 }
 
 .about-image{
@@ -996,7 +994,7 @@ fieldset{
     width: 100%;
     background-color: #0F0F0F;
     border-radius: 20px;
-    box-shadow: 0 0 20px rgba(5, 130, 202, 0.5); /* Adiciona uma sombra difusa */
+    box-shadow: 0 0 20px rgba(5, 130, 202, 0.5); 
     margin-top: 70px;
     display: flex;
     align-items: center;
@@ -1054,12 +1052,12 @@ fieldset{
     border: none;
     border-radius: 5px;
     margin: 15px 0 0 450px;
-    transition: box-shadow 0.3s ease; /* Adiciona uma transição suave */
+    transition: box-shadow 0.3s ease;
     cursor: pointer;
 }
 
 .event-content button:hover {
-    box-shadow: 0 0 10px 5px rgba(5, 130, 202, 0.5); /* Adiciona um efeito de brilho */
+    box-shadow: 0 0 10px 5px rgba(5, 130, 202, 0.5); 
 }
 
 .event-image{
@@ -1209,7 +1207,7 @@ fieldset{
     width: 312px;
     height: 404px;
     border-radius: 20px;
-    box-shadow: 0 0 20px rgba(5, 130, 202, 0.5); /* Adiciona uma sombra difusa */
+    box-shadow: 0 0 20px rgba(5, 130, 202, 0.5); 
     background-color: #101010;
     margin: 0 30px;
 }
@@ -1317,7 +1315,7 @@ fieldset{
 .testimonials-card1,
 .testimonials-card2{
     background-color: #101010;
-    box-shadow: 0 0 20px rgba(5, 130, 202, 0.5); /* Adiciona uma sombra difusa */
+    box-shadow: 0 0 20px rgba(5, 130, 202, 0.5); 
     width: 399px;
     height: 261px;
     border-radius: 20px;
@@ -1502,7 +1500,11 @@ fieldset{
     .mentor-image img{
         width: 100%;
     }
-
+    .mentor-text{
+        text-align: center;
+        max-width: 100%;
+        padding: 0 20px;
+    }
     
     .mentor-text h2{
         font-size: 30px;
@@ -1522,11 +1524,7 @@ fieldset{
 
 @media (max-width: 376px){
 
-    .mentor-text{
-        text-align: center;
-        max-width: 100%;
-        padding: 0 20px;
-    }
+
 
     .mentor-text h2{
         font-size: 27px;

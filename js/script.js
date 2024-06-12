@@ -47,7 +47,6 @@ function toggleHeaderOnScroll() {
 window.addEventListener("scroll", toggleHeaderOnScroll);
 window.addEventListener("resize", toggleHeaderOnScroll);
 
-// Chame a função uma vez para definir o estado inicial
 toggleHeaderOnScroll();
 
 
