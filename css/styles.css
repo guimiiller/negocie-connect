@@ -525,8 +525,8 @@ fieldset{
     }
     
     .banner-text img{
-        width: 120px;
-        height: 110px;
+        width: 100px;
+        height: 90px;
         margin-left: 20px;
     }
 
@@ -578,7 +578,6 @@ fieldset{
     .box{
         max-width: 100%;
         padding: 0 20px;
-        margin-top: 50px;
     }
 
     
@@ -603,22 +602,36 @@ fieldset{
 
 
 @media (max-width: 426px) {
+
+    .banner-text{
+        padding-top: 5px;
+    }
+
+    .banner-text img{
+        width: 90px;
+        height: 90px;
+    }
+
     .banner-text h1{
-        font-size: 40px;
+        font-size: 27px;
+        line-height: 30px;
     }
 
     .banner-text h2{
-        font-size: 16px;
+        font-size: 15px;
     }
 
     .banner-text h3{
         text-align: center;
-        font-size: 15px;
+        font-size: 16px;
+        line-height: 21px;
+        margin-bottom: 5px;
     }
 
     .banner-text h4{
         text-align: center;
-        font-size: 13px;
+        font-size: 15px;
+        margin-top: 10px;
     }
 
     .banner-text h5{
@@ -628,20 +641,35 @@ fieldset{
 
     .banner-text h6{
         text-align: center;
-        font-size: 15px;
+        font-size: 13px;
+        margin-top: 15px;
     }
 
-    .banner-text img{
-        width: 148px;
-        height: 150px;
+    .subscribe-btn{
+        margin-top: 0;
+    }
+
+    .banner-image h5{
+        margin-bottom: 100px;
     }
 
     .banner-text p{
-        margin-bottom: 25px;
+        margin-bottom: 10px;
+        font-size: 14px;
+        width: 150px;
+        height: 25px;
     }
 
     .labelInput{
         font-size: 14px;
+    }
+
+    .inputBox{
+        margin-bottom: 15px;
+    }
+
+    .inputUser{
+        margin: 0;
     }
 
     .banner-image img{
@@ -663,11 +691,6 @@ fieldset{
     .banner-text h2{
         font-size: 14px;
     }
-
-    .banner-text img{
-        width: 143px;
-        height: 147px;
-    }
 }
 
 @media (max-width: 321px){
@@ -677,11 +700,6 @@ fieldset{
 
     .banner-text h2{
         font-size: 14px;
-    }
-
-    .banner-text img{
-        width: 140px;
-        height: 145px;
     }
 }
 
