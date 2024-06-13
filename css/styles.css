@@ -574,6 +574,10 @@ fieldset{
         margin: 0;
     }
 
+    .banner-image{
+        margin-bottom: 30px;
+    }
+
     .brunoimg1{
         width: 100%;
         height: 100%;
