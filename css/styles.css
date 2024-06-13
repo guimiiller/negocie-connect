@@ -972,6 +972,13 @@ fieldset{
     }
 }
 
+
+@media (max-width: 769px){
+    .benefits-container{
+        padding: 10px;
+    }
+}
+
 .slide-nav {
     position: absolute;
     top: 50%;
@@ -1157,6 +1164,9 @@ fieldset{
         width: 100%;
     }
 
+    .event-title{
+        margin-top: 30px;
+    }
 }
 
 
@@ -1306,6 +1316,13 @@ fieldset{
 }
 
 
+@media (max-width: 769px){
+    .speakers-container{
+        padding-bottom: 20px;
+    }
+}
+
+
 @media (max-width: 425px){
     .speakers-card{
         padding: 0 10px;
@@ -1409,6 +1426,10 @@ fieldset{
 @media (max-width: 769px){
     .testimonials-card2{
         margin-top: 30px;
+    }
+
+    .testimonials-container{
+        padding-bottom: 20px;
     }
 }
 
@@ -1521,6 +1542,11 @@ fieldset{
 
 
 @media (max-width: 769px){
+
+    .mentor-container{
+        padding-bottom: 0;
+    }
+    
     .mentor-content{
         flex-direction: column;
     }
@@ -1663,12 +1689,14 @@ fieldset{
     border: 2px solid #0582CA;
 }
 
+@media (max-width: 769px){
+    .contact-container{
+        padding-top: 0;
+    }
+}
+
 
 @media (max-width: 426px){
-    .contact-container{
-        padding-top: 50px;
-    }
-
     .contact-content{
         flex-direction: column;
     }
