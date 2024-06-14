@@ -48,7 +48,7 @@
     width: 100px;
     height: 85px;
     object-fit: cover;
-    margin-top: 95px;
+    margin-top: 96px;
 }
 
 .logo span {
@@ -313,10 +313,11 @@
     font-size: 25px;
     color: #0582CA;
     line-height: 20px;
+    font-weight: bold;
 }
 
 .nav-logo h2{
-    font-size: 15px;
+    font-size: 14px;
     color: #0582CA;
 }
 
@@ -332,7 +333,7 @@
     border-radius: 5px;
     margin-bottom: 30px;
     font-size: 14px;
-    margin-top: 5px;
+    margin-top: 8px;
 }
 
 
