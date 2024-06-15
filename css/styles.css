@@ -476,60 +476,20 @@ h3 span, h4 span, h5 span, h6 span {
     width: 20%;
     border: none;
     margin-top: 10px;
-    max-width: 430px;
+    max-width: 350px;
     width: 100%;
     display: flex;
     justify-content: center;
     flex-direction: column;
 }
 
-fieldset{
-    border: none;
-}
-
-.inputBox{
-    position: relative;
-    width: 100%;
-    margin: 15px 0;
-}
-
-
-.inputUser{
-    background: none;
-    border: none;
-    border-bottom: 1px solid #0582CA;
-    outline: none;
-    color: white;
-    font-size: 15px;
-    width: 100%;
-    letter-spacing: 2px;
-    margin: 10px 0;
-}
-
-
-.labelInput {
-    position: absolute;
-    top: 0;
-    left: 0px;
-    pointer-events: none;
-    transition: .5s;
-}
-
-.labelInput.active {
-    top: -5px;
-    font-size: 12px;
-}
-
-.inputUser:focus ~ .labelInput,
-.inputUser:valid ~ .labelInput {
-    top: -5px;
-    font-size: 12px;
-    color: #0582CA; 
-}
 
 .subscribe-btn {
-    padding: 17px 51px;
-    margin-top: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 17px 40px;
+    margin-top: 20px;
     color: #fff;
     background-color: #0582CA;
     border: none;
@@ -537,6 +497,7 @@ fieldset{
     transition: box-shadow 0.3s ease; 
     cursor: pointer;
     font-size: 16px;
+    text-transform: uppercase;
 }
 
 .subscribe-btn:hover {
@@ -719,6 +680,7 @@ fieldset{
         width: 100%;
         font-size: 14px;
         padding: 17px 20px;
+        margin-top: 25px;
     }
 }
 
@@ -1706,7 +1668,7 @@ fieldset{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 60px;
+    gap: 25px;
     margin-top: 36px;
 }
 
