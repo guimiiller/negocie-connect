@@ -51,3 +51,33 @@ window.addEventListener('scroll', function(){
     animeScroll()
 })
 /* SCROLL */
+
+
+const inputs = document.querySelectorAll('.inputUser');
+    
+inputs.forEach(input => {
+    input.addEventListener('input', function() {
+        const label = this.nextElementSibling;
+        if (this.value.trim() !== '') {
+            label.classList.add('active');
+        } else {
+            label.classList.remove('active');
+        }
+    });
+});
+
+
+const form = document.getElementById('subscription-form');
+    
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        const email = document.getElementById('email').value.trim();
+        const phone = document.getElementById('phone').value.trim();
+        
+        if (email !== '' && phone !== '') {
+            window.location.href = 'success.html';
+        } else {
+            alert('Por favor, preencha todos os campos.');
+        }
+});

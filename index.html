@@ -46,7 +46,7 @@
                 <li><a href="#mentor" class="nav-item">MENTOR</a></li>
                 <li><a href="#contact" class="nav-item">CONTATO</a></li>
             </ul>
-            <a href="" class="btn-whats">PARTICIPE DO NOSSO GRUPO <img src="./images/icons/whats.svg" alt="Icon Whats"></a>
+            <a href="https://chat.whatsapp.com/LPvU9VeH8O36be26vwGSzB" class="btn-whats"  target="_blank" id="whatsapp-btn">PARTICIPE DO NOSSO GRUPO <img src="./images/icons/whats.svg" alt="Icon Whats"></a>
         </nav>
     </header>
 
@@ -103,18 +103,18 @@
             <h5>As <span>sessões interativas</span> e <span>discussões envolventes</span> permitem aplicar novos conhecimentos diretamente no seu <span>negócio</span>. Não perca a chance de fazer parte de uma <span>comunidade de alto impacto</span>.</h5>
             <h6>Inscreva-se agora e transforme sua jornada empreendedora com o <span>NEGOCIE CONNECT</span>!</h6>
             <div class="box">
-                <form>
+                <form id="subscription-form">
                     <fieldset>
                         <div class="inputBox">
-                            <input type="text" name="email" id="email" class="inputUser" required>
-                            <label for="email" class="labelInput">DIGITE SEU MELHOR E-MAIL</label>
+                            <input type="email" name="email" id="email" class="inputUser" required>
+                            <label for="email" class="labelInput">Digite seu melhor e-mail</label>
                         </div>
                         <div class="inputBox">
-                            <input type="number" name="number" id="number" class="inputUser" required>
-                            <label for="number" class="labelInput">DIGITE SEU TELEFONE</label>
+                            <input type="tel" name="phone" id="phone" class="inputUser" required>
+                            <label for="phone" class="labelInput">Digite seu telefone</label>
                         </div>
                     </fieldset>
-                    <button class="subscribe-btn">QUERO PARTICIPAR DO NEGOCIE</button>
+                    <button type="submit" class="subscribe-btn">Quero Participar do NEGOCIE</button>
                 </form>
             </div>
         </div>
@@ -249,6 +249,7 @@
         </div>
     </section>
 
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="./js/script.js"></script>
 </body>
 </html>

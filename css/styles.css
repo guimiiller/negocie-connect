@@ -503,9 +503,11 @@ fieldset{
     font-size: 15px;
     width: 100%;
     letter-spacing: 2px;
+    margin: 10px 0;
 }
 
-.labelInput{
+
+.labelInput {
     position: absolute;
     top: 0;
     left: 0px;
@@ -513,16 +515,21 @@ fieldset{
     transition: .5s;
 }
 
-.inputUser:focus ~ .labelInput,
-.inputUser:valid ~ .labelInput{
+.labelInput.active {
     top: -5px;
     font-size: 12px;
-    color: #0582CA;
+}
+
+.inputUser:focus ~ .labelInput,
+.inputUser:valid ~ .labelInput {
+    top: -5px;
+    font-size: 12px;
+    color: #0582CA; 
 }
 
 .subscribe-btn {
     padding: 17px 51px;
-    margin-top: 10px;
+    margin-top: 2px;
     color: #fff;
     background-color: #0582CA;
     border: none;
