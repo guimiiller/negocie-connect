@@ -183,3 +183,65 @@ textarea{
     color: #FFF;
     width: 100%;
 }
+
+
+/* Responsividade */
+@media (max-width: 769px) {
+    body{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .forms-container {
+        width: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-right: 0;
+    }
+
+    .formEvento{
+        align-items: center;
+    }
+
+    .formPalestrante{
+        align-items: center;
+    }
+
+    .speaker-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .speaker-card img {
+        width: 100%;
+        max-width: 200px;
+    }
+
+    .speaker-social-links {
+        justify-content: center;
+    }
+
+    .speaker-social-links img{
+        width: 17px;
+        height: 17px;
+        border-radius: 0;
+        margin: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    header a {
+        font-size: 16px;
+    }
+
+    .forms-container {
+        width: 95%;
+    }
+
+    button {
+        padding: 8px;
+    }
+}
