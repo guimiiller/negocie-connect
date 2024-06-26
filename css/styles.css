@@ -1078,17 +1078,17 @@ h3 span, h4 span, h5 span, h6 span {
 
 .event-text h4{
     color: #fff;
-    padding-bottom: 25px;
+    padding-bottom: 15px;
     font-size: 20px;
     text-align: center;
 }
 
-.event-text h5{
+.p-event{
     background-color: #0582CA;
     color: #FFF;
-    padding: 3px 6px;
+    padding: 3px 8px;
     border-radius: 5px;
-    margin: 10px 0 34px 0;
+    margin: 10px 0 30px 0;
 }
 
 .event-text p{
@@ -1096,12 +1096,6 @@ h3 span, h4 span, h5 span, h6 span {
     color: #fff;
     line-height: 27px;
     margin-top: 20px;
-}
-
-.p-event{
-    background-color: #0582CA;
-    border-radius: 5px;
-    padding: 2px 10px;
 }
 
 .event-content button{
