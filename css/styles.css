@@ -1098,6 +1098,11 @@ h3 span, h4 span, h5 span, h6 span {
     margin-top: 20px;
 }
 
+.p-event{
+    background-color: #0582CA;
+    border-radius: 5px;
+    padding: 2px 10px;
+}
 
 .event-content button{
     display: flex;
@@ -1282,21 +1287,21 @@ h3 span, h4 span, h5 span, h6 span {
     border: 2px solid #0582CA;
 }
 
-.speakers-card h4{
+.speaker-name {
     margin-top: 17px;
     font-size: 16px;
     color: #0582CA;
     font-weight: bold;
 }
 
-.speakers-card p{
+.speaker-description{
     font-size: 15px;
     color: #FFF;
     font-weight: bold;
     margin-top: 17px;   
 }
 
-.speakers-card-icons{
+.speaker-social-links{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1304,12 +1309,12 @@ h3 span, h4 span, h5 span, h6 span {
     margin-top: 30px;
 }
 
-.speakers-card-icons img{
+.speaker-social-links img{
     transition: transform .3s;
     cursor: pointer;
 }
 
-.speakers-card-icons img:hover{
+.speaker-social-links img:hover{
     transform: scale(1.1);
 }
 
@@ -1337,6 +1342,13 @@ h3 span, h4 span, h5 span, h6 span {
         width: 100%; 
     }
 
+}
+
+@media (max-width: 322px){
+    .speakers-card{
+        margin: 20px 0;
+        padding: 0 20px;
+    }
 }
 
 
@@ -1626,7 +1638,7 @@ h3 span, h4 span, h5 span, h6 span {
     justify-content: center;
     flex-direction: column;
     background-color: #0b111d;
-    padding: 100px 0;
+    padding: 150px 0;
 }
 
 
@@ -1639,7 +1651,7 @@ h3 span, h4 span, h5 span, h6 span {
 
 
 .contact-text{
-    margin-right: 105px;
+    margin-right: 200px;
 }
 
 .contact-text h3{
@@ -1719,6 +1731,90 @@ h3 span, h4 span, h5 span, h6 span {
     .contact-image{
         padding: 0 20px;
     }
+}
+
+
+.social-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+    background-color: #091223;
+    border-top: 1px solid #006494;
+}
+
+.social-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.social-card {
+    position: relative;
+    width: 110px;
+    height: 70px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    border: 1px solid #006494;
+}
+
+.social-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.social-card:hover img {
+    transform: scale(1.1);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 18, 42, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.social-card:hover .overlay {
+    opacity: 1;
+}
+
+.social-links {
+    display: flex;
+    gap: 10px;
+}
+
+.social-links a {
+    color: white;
+}
+
+.social-links img {
+    width: 17px;
+    height: 17px;
+    margin: 0 5px;
+}
+
+@media (max-width: 426px){
+    .social-content {
+        gap: 20px;
+    }
+
+    .social-container {
+        padding-bottom:  70px;
+    }
+
 }
 
 

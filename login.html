@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="./images/favicon.ico" type="image/png">
+  <link rel="stylesheet" href="./css/login.css">
+  <title>Login Administrador</title>
+</head>
+<body>
+
+<script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+    import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+
+    const firebaseConfig = {
+        apiKey: "AIzaSyBLm22X74sLH9R_cD4v9lcuL8GlCMvEVA8",
+        authDomain: "negocie-a2b51.firebaseapp.com",
+        projectId: "negocie-a2b51",
+        storageBucket: "negocie-a2b51.appspot.com",
+        messagingSenderId: "910984167241",
+        appId: "1:910984167241:web:601047ab464704bf9fa498",
+        measurementId: "G-72CC5S413Z"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+
+    function fazerLogin() {
+        const email = document.getElementById('email').value;
+        const senha = document.getElementById('senha').value;
+
+        signInWithEmailAndPassword(auth, email, senha)
+            .then((userCredential) => {
+                const user = userCredential.user;
+                console.log('Usuário logado:', user.uid);
+                window.location.href = 'admin.html';
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                console.error('Erro ao fazer login:', errorMessage);
+                alert('Erro ao fazer login. Verifique suas credenciais.');
+            });
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('btnLogin').addEventListener('click', fazerLogin);
+    });
+</script>
+
+<h1>Login Administrador</h1>
+<form>
+    <label for="email">Email:</label>
+    <input type="email" id="email" required>
+
+    <label for="senha">Senha:</label>
+    <input type="password" id="senha" required>
+
+    <button type="button" id="btnLogin">Login</button>
+</form>
+
+</body>
+</html>

@@ -37,7 +37,7 @@
                 <a href="/" class="logo"><img src="./images/logo.svg" alt="Logo NEGOCIE"></a>
                 <h1>NEGOCIE</h1>
                 <h2>CONNECT</h2>
-                <p>15 de agosto | 20h</p>
+                <p id="dataEventoDisplay">Data do evento</p>
             </div>
             <ul class="nav-menu">
                 <li><a href="/" class="nav-item active">HOME</a></li>
@@ -97,7 +97,7 @@
                 <h1>NEGOCIE</h1>
                 <h2>CONNECT</h2>
             </div>
-            <p>15 de agosto | 20h</p>
+            <p id="dataEventoDisplayBanner">Data do evento</p>
             <h3>Muitos <span>empreendedores</span> enfrentam dificuldades em encontrar <span>oportunidades</span> e conectar-se com pessoas que ajudam a crescer seus <span>negócios</span>, sentindo-se isolados e sem acesso a informações valiosas.</h3>
             <h4>O <span>NEGOCIE CONNECT</span> conecta <span>empreendedores</span>, oferece aprendizado com <span>especialistas</span>, <span>palestras inspiradoras</span> e <span>networking</span>.</h4>
             <h5>As <span>sessões interativas</span> e <span>discussões envolventes</span> permitem aplicar novos conhecimentos diretamente no seu <span>negócio</span>. Não perca a chance de fazer parte de uma <span>comunidade de alto impacto</span>.</h5>
@@ -165,8 +165,8 @@
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3678.0750052724707!2d-47.29388632505544!3d-22.799684479330498!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c897f60cf78117%3A0x521ca1e44257fc32!2sR.%20Alzira%20Delega%2C%20396%20-%20Green%20Village%2C%20Nova%20Odessa%20-%20SP%2C%2013385-496!5e0!3m2!1spt-BR!2sbr!4v1718155482817!5m2!1spt-BR!2sbr"></iframe>
                 </div>
                 <div class="event-text">
-                    <h4>CENTRO DE CONVENÇÕES DA <br>CIDADE</h4>
-                    <h5>15 de Agosto | 20h</h5>
+                    <h4 id="localEventoDisplay">CENTRO DE CONVENÇÕES DA <br>CIDADE</h4>
+                    <p id="dataEventoDisplayEvent" class="p-event">Data do evento</p>
                     <p>Nosso próximo encontro presencial abordará a inovação em pequenos negócios. Venha aprender com especialistas e trocar experiências com outros empreendedores.</p>
                 </div>
 
@@ -181,12 +181,9 @@
             <h3 data-anime="bottom">Especialistas renomados em diversas áreas do empreendedorismo</h3>
             <div class="line" data-anime="bottom"></div>
         </div>
-        <div class="speakers-content">
-            <div class="speakers-card" data-anime="bottom"><img src="./images/speaker.png" alt="" class="speakers-card-img"><h4>NAME</h4><p>DESCRIPTION</p><div class="speakers-card-icons"><img src="./images/icons/twitterx.svg" alt=""><img src="./images/icons/insta.svg" alt=""><img src="./images/icons/linke.svg" alt=""></div></div>
-            <div class="speakers-card" data-anime="bottom"><img src="./images/speaker.png" alt="" class="speakers-card-img"><h4>NAME</h4><p>DESCRIPTION</p><div class="speakers-card-icons"><img src="./images/icons/twitterx.svg" alt=""><img src="./images/icons/insta.svg" alt=""><img src="./images/icons/linke.svg" alt=""></div></div>
-            <div class="speakers-card" data-anime="bottom"><img src="./images/speaker.png" alt="" class="speakers-card-img"><h4>NAME</h4><p>DESCRIPTION</p><div class="speakers-card-icons"><img src="./images/icons/twitterx.svg" alt=""><img src="./images/icons/insta.svg" alt=""><img src="./images/icons/linke.svg" alt=""></div></div>
-            <div class="speakers-card" data-anime="bottom"><img src="./images/speaker.png" alt="" class="speakers-card-img"><h4>NAME</h4><p>DESCRIPTION</p><div class="speakers-card-icons"><img src="./images/icons/twitterx.svg" alt=""><img src="./images/icons/insta.svg" alt=""><img src="./images/icons/linke.svg" alt=""></div></div>
-        </div>
+        <section class="speakers-content" id="speakers">
+            
+        </section>
     </section>
 
     <section class="testimonials-container">
@@ -236,6 +233,170 @@
             </div>
         </div>
     </section>
+
+    <section class="social-container" id="social">
+        <div class="social-content">
+            <div class="social-card">
+                <img src="./images/bg-card1.jpg" alt="Social 1">
+                <div class="overlay">
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/eusoubrunobarros/" target="_blank">
+                            <img src="./images/icons/icon-insta-part.png" alt="Instagram">
+                        </a>
+                        <a href="https://www.linkedin.com/in/bruno-barrosbb/" target="_blank">
+                            <img src="./images/icons/icon-linke-part.png" alt="LinkedIn">
+                        </a>
+                        <a href="https://www.bruno-barros.com" target="_blank">
+                            <img src="./images/icons/icon-site-part.png" alt="Website">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="social-card">
+                <img src="./images/bg-card2.jpg" alt="Social 2">
+                <div class="overlay">
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/eusoubrunobarros/" target="_blank">
+                            <img src="./images/icons/icon-insta-part.png" alt="Instagram">
+                        </a>
+                        <a href="https://www.linkedin.com/in/bruno-barrosbb/" target="_blank">
+                            <img src="./images/icons/icon-linke-part.png" alt="LinkedIn">
+                        </a>
+                        <a href="https://www.bruno-barros.com" target="_blank">
+                            <img src="./images/icons/icon-site-part.png" alt="Website">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="social-card">
+                <img src="./images/bg-card3.jpg" alt="Social 3">
+                <div class="overlay">
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/eusoubrunobarros/" target="_blank">
+                            <img src="./images/icons/icon-insta-part.png" alt="Instagram">
+                        </a>
+                        <a href="https://www.linkedin.com/in/bruno-barrosbb/" target="_blank">
+                            <img src="./images/icons/icon-linke-part.png" alt="LinkedIn">
+                        </a>
+                        <a href="https://www.bruno-barros.com" target="_blank">
+                            <img src="./images/icons/icon-site-part.png" alt="Website">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="social-card">
+                <img src="./images/bg-card4.jpg" alt="Social 4">
+                <div class="overlay">
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/eusoubrunobarros/" target="_blank">
+                            <img src="./images/icons/icon-insta-part.png" alt="Instagram">
+                        </a>
+                        <a href="https://www.linkedin.com/in/bruno-barrosbb/" target="_blank">
+                            <img src="./images/icons/icon-linke-part.png" alt="LinkedIn">
+                        </a>
+                        <a href="https://www.bruno-barros.com" target="_blank">
+                            <img src="./images/icons/icon-site-part.png" alt="Website">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+        import { getFirestore, doc, updateDoc, getDoc, collection, getDocs } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyBLm22X74sLH9R_cD4v9lcuL8GlCMvEVA8",
+            authDomain: "negocie-a2b51.firebaseapp.com",
+            projectId: "negocie-a2b51",
+            storageBucket: "negocie-a2b51.appspot.com",
+            messagingSenderId: "910984167241",
+            appId: "1:910984167241:web:601047ab464704bf9fa498",
+            measurementId: "G-72CC5S413Z"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+
+        async function fetchEventData() {
+            const eventoRef = doc(db, 'evento', 'informacoes');
+            const docSnap = await getDoc(eventoRef);
+
+            if (docSnap.exists()) {
+                const dataEvento = docSnap.data().dataEvento;
+                const localEvento = docSnap.data().localEvento;
+
+                document.getElementById('dataEventoDisplay').innerText = dataEvento;
+                document.getElementById('dataEventoDisplayBanner').innerText = dataEvento;
+                document.getElementById('dataEventoDisplayEvent').innerText = dataEvento;
+                document.getElementById('localEventoDisplay').innerText = localEvento;
+            } else {
+                console.log('Nenhum dado encontrado!');
+            }
+        }
+
+        async function fetchSpeakers() {
+            const speakersRef = collection(db, 'palestrantes');
+            const speakersSnapshot = await getDocs(speakersRef);
+            const speakersList = speakersSnapshot.docs.map(doc => doc.data());
+
+            const speakersContainer = document.getElementById('speakers');
+            speakersContainer.innerHTML = '';
+
+            speakersList.forEach(speaker => {
+                const speakerElement = document.createElement('div');
+                speakerElement.classList.add('speaker-card');
+                speakerElement.innerHTML = `
+                    <div class="speakers-card">
+                        <img src="${speaker.foto}" alt="${speaker.nome}" class="speakers-card-img">
+                        <h4 class="speaker-name">${speaker.nome}</h4>
+                        <p class="speaker-description">${speaker.descricao}</p>
+                        <div class="speaker-social-links">
+                            ${speaker.linkX ? `<a href="${speaker.linkX}" target="_blank"><img src="./images/icons/twitterx.svg" alt="X Icon"></a>` : ''}
+                            ${speaker.linkInstagram ? `<a href="${speaker.linkInstagram}" target="_blank"><img src="./images/icons/insta.svg" alt="Instagram Icon"></a>` : ''}
+                            ${speaker.linkLinkedIn ? `<a href="${speaker.linkLinkedIn}" target="_blank"><img src="./images/icons/linke.svg" alt="LinkedIn Icon"></a>` : ''}
+                        </div>    
+                    </div>
+                `;
+                speakersContainer.appendChild(speakerElement);
+            });
+        }
+
+        
+        async function salvarAlteracoes() {
+            const dataEventoInput = document.getElementById('dataEvento');
+            const localEventoInput = document.getElementById('localEvento');
+
+            const dataEvento = dataEventoInput.value;
+            const localEvento = localEventoInput.value;
+
+            try {
+                const eventoRef = doc(db, 'evento', 'informacoes');
+                await updateDoc(eventoRef, {
+                    dataEvento: dataEvento,
+                    localEvento: localEvento
+                });
+
+                console.log('Dados do evento atualizados com sucesso!');
+                alert('Dados do evento atualizados com sucesso!');
+            } catch (error) {
+                console.error('Erro ao atualizar dados do evento:', error);
+                alert('Erro ao atualizar dados do evento. Verifique o console para mais detalhes.');
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            fetchEventData();
+            fetchSpeakers();
+        });
+
+        document.getElementById('formEvento').addEventListener('submit', function(event) {
+            event.preventDefault();
+            salvarAlteracoes();
+    });
+      </script>
 
     <script src="./js/script.js"></script>
 </body>
