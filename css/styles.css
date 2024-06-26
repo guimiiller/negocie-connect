@@ -1275,7 +1275,7 @@ h3 span, h4 span, h5 span, h6 span {
     border-radius: 20px;
     box-shadow: 0 0 20px rgba(5, 130, 202, 0.5); 
     background-color: #101010;
-    margin: 0 30px;
+    margin: 20px 30px;
 }
 
 .speakers-card-img{
