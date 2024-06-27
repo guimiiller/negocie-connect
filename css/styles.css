@@ -1708,6 +1708,9 @@ h3 span, h4 span, h5 span, h6 span {
 
 
 @media (max-width: 426px){
+    .contact-container{
+        padding-bottom: 50px;
+    }
     .contact-content{
         flex-direction: column;
     }
@@ -1728,87 +1731,185 @@ h3 span, h4 span, h5 span, h6 span {
 }
 
 
-.social-container {
+.partners-container{
     display: flex;
-    justify-content: center;
     align-items: center;
-    padding: 30px 0;
-    background-color: #091223;
-    border-top: 1px solid #006494;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #0b111d;
+    padding-bottom: 40px;
+    background-image: linear-gradient(rgba(0,0,0,0.40), rgba(0,0,0,0.40)), url('../images/bg/bg3.jpg');
+    background-position: bottom;
+    background-size: cover;
 }
 
-.social-content {
+.partners-title{
+    text-align: center;
     display: flex;
-    justify-content: center;
     align-items: center;
-    gap: 60px;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 54px;
+}
+
+.partners-title h2{
+    font-size: 25px;
+    color: #00A6FB;
+    font-weight: 100;
+}
+
+.partners-title h3{
+    font-size: 16px;
+    color: #006494;
+    font-weight: bold;
+    margin-top: 13px;
+    max-width: 350px;
+}
+
+
+.partners-cards{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
     flex-wrap: wrap;
 }
 
-.social-card {
-    position: relative;
-    width: 110px;
-    height: 70px;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    border: 1px solid #006494;
+
+.partners-card{
+    width: 224px;
+    height: 276px;
+    background-color: #101010;
+    box-shadow: 0 0 20px rgba(5, 130, 202, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    border-radius: 20px;
+    margin: 20px;
 }
 
-.social-card img {
-    width: 100%;
-    height: 100%;
+.partner-img{
+    width: 78px;
+    height: 78px;
+    border-radius: 50%;
     object-fit: cover;
-    transition: transform 0.3s ease;
+    border: 1px solid #0582CA;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    transition: transform .3s;
 }
 
-.social-card:hover img {
+.partner-img:hover{
     transform: scale(1.1);
 }
 
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 18, 42, 0.7);
+.partners-card h4{
+    color: #0582CA;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.partners-card p{
+    color: #FFF;
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+.container-socials{
     display: flex;
-    justify-content: center;
+}
+
+.social-partners a{
+    width: 40px;
+    height: 40px;
+    background-color: #0582CA;
+    border-radius: 50%;
+    display: flex;
     align-items: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
+    justify-content: center;
+    margin: 37px 10px 0 10px;
+    transition: transform .3s;
 }
 
-.social-card:hover .overlay {
-    opacity: 1;
+.social-partners a:hover{
+    transform: scale(1.1);
 }
 
-.social-links {
+.call-to{
+    text-align: center;
     display: flex;
-    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 60px;
 }
 
-.social-links a {
-    color: white;
+.call-to h2{
+    font-size: 30px;
+    color: #00A6FB;
+    font-weight: 100;
 }
 
-.social-links img {
-    width: 17px;
-    height: 17px;
-    margin: 0 5px;
+.call-to h3{
+    font-size: 16px;
+    color: #FFF;
+    margin-top: 13px;
+    max-width:  480px;
+    margin-bottom: 15px;
 }
+
+.call-to button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 30px;
+    margin-top: 20px;
+    color: #fff;
+    background-color: #0582CA;
+    border: none;
+    border-radius: 5px;
+    transition: box-shadow 0.3s ease; 
+    cursor: pointer;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.call-to button:hover {
+    box-shadow: 0 0 10px 5px rgba(5, 130, 202, 0.5); 
+}
+
 
 @media (max-width: 426px){
-    .social-content {
-        gap: 20px;
+    .partners-container{
+        padding-bottom: 80px;
     }
-
-    .social-container {
-        padding-bottom:  70px;
+    .call-to{
+        margin-top: 30px;
     }
+    .call-to h2{
+        font-size: 23px;
+    }
+    
+    .call-to h3{
+        font-size: 14px;
+        
+        padding: 0 10px;
+    }
+}
 
+
+@media (max-width: 321px){
+    .call-to h2{
+        font-size: 20px;
+    }
+    
+    .call-to h3{
+        font-size: 13px;
+        color: #FFF;
+        margin-top: 13px;
+        max-width: 420px;
+    }
 }
 
 
