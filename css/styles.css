@@ -1265,11 +1265,12 @@ h3 span, h4 span, h5 span, h6 span {
     justify-content: flex-start;
     flex-direction: column;
     width: 312px;
-    height: 420px;
+    height: auto;
     border-radius: 20px;
     box-shadow: 0 0 20px rgba(5, 130, 202, 0.5); 
     background-color: #101010;
     margin: 20px 30px;
+    padding-bottom: 10px;
 }
 
 .speakers-card-img{
@@ -1289,7 +1290,7 @@ h3 span, h4 span, h5 span, h6 span {
 }
 
 .speaker-description{
-    font-size: 15px;
+    font-size: 12px;
     color: #FFF;
     font-weight: bold;
     margin-top: 17px;   
