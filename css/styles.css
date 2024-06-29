@@ -783,7 +783,7 @@ h3 span, h4 span, h5 span, h6 span {
 .about-text h4{
     color: #fff;
     padding: 15px 0 25px 0;
-    font-size: 16px;
+    font-size: 17px;
 }
 
 .about-text span{
@@ -791,10 +791,11 @@ h3 span, h4 span, h5 span, h6 span {
 }
 
 .about-text p{
-    font-size: 15px;
+    font-size: 14px;
     color: #fff;
-    line-height: 27px;
-    margin-top: 20px;
+    line-height: 20px;
+    margin-top: 10px;
+    margin-bottom: 15px;
 }
 
 
@@ -817,8 +818,8 @@ h3 span, h4 span, h5 span, h6 span {
     box-shadow: 0 0 10px 5px rgba(5, 130, 202, 0.5); 
 }
 
-.about-image{
-    margin-top: 30px;
+.about-image img{
+    margin-top: 50px;
 }
 
 @media (max-width: 769px){
