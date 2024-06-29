@@ -35,8 +35,8 @@
         <label for="descricaoPalestrante">Descrição do Palestrante:</label>
         <textarea id="descricaoPalestrante" name="descricaoPalestrante" required></textarea>
 
-        <label for="fotoPalestrante">URL da Foto do Palestrante:</label>
-        <input type="text" id="fotoPalestrante" name="fotoPalestrante" required>
+        <label for="fotoPalestrante">Foto do Palestrante:</label>
+        <input type="file" id="fotoPalestrante" name="fotoPalestrante" accept="image/*" required>
 
         <label for="linkX">Link do X:</label>
         <input type="url" id="linkX" name="linkX">
@@ -57,6 +57,7 @@
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
     import { getFirestore, doc, updateDoc, getDoc, collection, getDocs, setDoc, deleteDoc } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
     import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+    import { getStorage, ref, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-storage.js";
 
     const firebaseConfig = {
         apiKey: "AIzaSyBLm22X74sLH9R_cD4v9lcuL8GlCMvEVA8",
@@ -71,6 +72,8 @@
     const app = initializeApp(firebaseConfig);
     const db = getFirestore(app);
     const auth = getAuth();
+    const storage = getStorage(app);
+
 
 
      onAuthStateChanged(auth, user => {
@@ -155,19 +158,25 @@
     }
 
     async function salvarPalestrante() {
-        const nomePalestrante = document.getElementById('nomePalestrante').value;
-        const descricaoPalestrante = document.getElementById('descricaoPalestrante').value;
-        const fotoPalestrante = document.getElementById('fotoPalestrante').value;
-        const linkX = document.getElementById('linkX').value;
-        const linkInstagram = document.getElementById('linkInstagram').value;
-        const linkLinkedIn = document.getElementById('linkLinkedIn').value;
+    const nomePalestrante = document.getElementById('nomePalestrante').value;
+    const descricaoPalestrante = document.getElementById('descricaoPalestrante').value;
+    const fotoPalestrante = document.getElementById('fotoPalestrante').files[0];
+    const linkX = document.getElementById('linkX').value;
+    const linkInstagram = document.getElementById('linkInstagram').value;
+    const linkLinkedIn = document.getElementById('linkLinkedIn').value;
 
+    if (fotoPalestrante) {
+        const storageRef = ref(storage, 'palestrantes/' + fotoPalestrante.name);
+        
         try {
+            await uploadBytes(storageRef, fotoPalestrante);
+            const fotoURL = await getDownloadURL(storageRef);
+
             const novoPalestranteRef = doc(collection(db, 'palestrantes'));
             await setDoc(novoPalestranteRef, {
                 nome: nomePalestrante,
                 descricao: descricaoPalestrante,
-                foto: fotoPalestrante,
+                foto: fotoURL,
                 linkX: linkX,
                 linkInstagram: linkInstagram,
                 linkLinkedIn: linkLinkedIn
@@ -180,7 +189,10 @@
             console.error('Erro ao salvar palestrante:', error);
             alert('Erro ao salvar palestrante. Verifique o console para mais detalhes.');
         }
+    } else {
+        alert('Por favor, selecione uma foto para o palestrante.');
     }
+}
 
     document.addEventListener('DOMContentLoaded', () => {
         fetchEventData();
