@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -24,6 +26,7 @@
         <button type="submit">Salvar Alterações</button>
     </form>
 
+    
     <form id="formPalestrante">
         <h1>Palestrantes</h1>
         <label for="nomePalestrante">Nome do Palestrante:</label>
@@ -32,8 +35,8 @@
         <label for="descricaoPalestrante">Descrição do Palestrante:</label>
         <textarea id="descricaoPalestrante" name="descricaoPalestrante" required></textarea>
 
-        <label for="fotoPalestrante">Imagem do Palestrante:</label>
-        <input type="file" id="fotoPalestrante" name="fotoPalestrante" accept="image/*" required>
+        <label for="fotoPalestrante">URL da Foto do Palestrante:</label>
+        <input type="text" id="fotoPalestrante" name="fotoPalestrante" required>
 
         <label for="linkX">Link do X:</label>
         <input type="url" id="linkX" name="linkX">
@@ -53,7 +56,6 @@
 <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
     import { getFirestore, doc, updateDoc, getDoc, collection, getDocs, setDoc, deleteDoc } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
-    import { getStorage, ref, uploadBytes, getDownloadURL, deleteObject } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-storage.js";
     import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
 
     const firebaseConfig = {
@@ -68,10 +70,10 @@
     
     const app = initializeApp(firebaseConfig);
     const db = getFirestore(app);
-    const storage = getStorage(app);
     const auth = getAuth();
 
-    onAuthStateChanged(auth, user => {
+
+     onAuthStateChanged(auth, user => {
         if (!user) {
             window.location.href = "login.html";
         } else {
@@ -79,7 +81,6 @@
             fetchSpeakers();
         }
     });
-
     async function fetchEventData() {
         const eventoRef = doc(db, 'evento', 'informacoes');
         const docSnap = await getDoc(eventoRef);
@@ -156,23 +157,17 @@
     async function salvarPalestrante() {
         const nomePalestrante = document.getElementById('nomePalestrante').value;
         const descricaoPalestrante = document.getElementById('descricaoPalestrante').value;
-        const fotoPalestrante = document.getElementById('fotoPalestrante').files[0];
+        const fotoPalestrante = document.getElementById('fotoPalestrante').value;
         const linkX = document.getElementById('linkX').value;
         const linkInstagram = document.getElementById('linkInstagram').value;
         const linkLinkedIn = document.getElementById('linkLinkedIn').value;
 
         try {
-            // Fazer upload da imagem para o Firebase Storage
-            const storageRef = ref(storage, 'palestrantes/' + fotoPalestrante.name);
-            await uploadBytes(storageRef, fotoPalestrante);
-            const fotoUrl = await getDownloadURL(storageRef);
-
-            // Adicionar um documento à coleção 'palestrantes'
             const novoPalestranteRef = doc(collection(db, 'palestrantes'));
             await setDoc(novoPalestranteRef, {
                 nome: nomePalestrante,
                 descricao: descricaoPalestrante,
-                foto: fotoUrl,
+                foto: fotoPalestrante,
                 linkX: linkX,
                 linkInstagram: linkInstagram,
                 linkLinkedIn: linkLinkedIn
@@ -202,6 +197,5 @@
         salvarPalestrante();
     });
 </script>
-
 </body>
 </html>
