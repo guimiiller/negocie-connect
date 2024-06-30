@@ -862,6 +862,7 @@ h3 span, h4 span, h5 span, h6 span {
 
     .about-image img{
         width: 100%;
+        margin-top: 10px;
     }
 
     .about-content button{
