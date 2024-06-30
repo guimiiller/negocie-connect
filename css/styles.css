@@ -1267,18 +1267,18 @@ h3 span, h4 span, h5 span, h6 span {
     align-items: center;
     justify-content: space-between; /* Distribute space between elements */
     max-width: 370px;
-    min-height: 500px; /* Set a minimum height */
+    min-height: 530px; /* Set a minimum height */
     border-radius: 20px;
     box-shadow: 0 0 20px rgba(5, 130, 202, 0.5);
     background-color: #101010;
-    margin: 20px 30px;
+    margin: 0 30px;
     padding-bottom: 10px;
     padding-top: 5px;
 }
 
 .speakers-card-img{
-    width: 252px;
-    height: 233px;
+    width: 280px;
+    height: 220px;
     object-fit: cover;
     margin-top: 20px;
     border-radius: 20px;
@@ -1298,7 +1298,7 @@ h3 span, h4 span, h5 span, h6 span {
     font-weight: 500;
     margin-top: 17px;
     width: 100%;
-    padding: 0 30px;
+    padding: 0 30px 0 45px;
     flex-grow: 1; /* Allow the description to grow */
 }
 
@@ -1795,8 +1795,8 @@ h3 span, h4 span, h5 span, h6 span {
 
 
 .partners-card{
-    width: 224px;
-    height: 276px;
+    width: 300px;
+    min-height: 334px;
     background-color: #101010;
     box-shadow: 0 0 20px rgba(5, 130, 202, 0.5);
     display: flex;
@@ -1830,12 +1830,17 @@ h3 span, h4 span, h5 span, h6 span {
 
 .partners-card p{
     color: #FFF;
-    font-size: 13px;
+    font-size: 12px;
     margin-top: 10px;
+    padding: 0 20px;
+    text-align: center;
 }
 
 .container-socials{
     display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
 }
 
 .social-partners a{
@@ -1846,7 +1851,7 @@ h3 span, h4 span, h5 span, h6 span {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 37px 10px 0 10px;
+    margin: 20px 10px 0 10px;
     transition: transform .3s;
 }
 
