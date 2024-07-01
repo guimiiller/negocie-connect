@@ -791,7 +791,7 @@ h3 span, h4 span, h5 span, h6 span {
 }
 
 .about-text p{
-    font-size: 14px;
+    font-size: 16px;
     color: #fff;
     line-height: 20px;
     margin-top: 10px;
@@ -856,9 +856,6 @@ h3 span, h4 span, h5 span, h6 span {
     .about-text{
         max-width: 100%;
     }
-    .about-text p{
-        font-size: 13px;
-    }
 
     .about-image img{
         width: 100%;
@@ -877,19 +874,13 @@ h3 span, h4 span, h5 span, h6 span {
 }
 
 
-@media (max-width: 376px){
-    .about-text p{
-        font-size: 12px;
-    }
-}
-
 @media (max-width: 321px){
     .banner-text h4{
         font-size: 14px;
     }
 
     .about-text p{
-        font-size: 11px;
+        font-size: 14px;
     }
 
 }
