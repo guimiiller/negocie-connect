@@ -1194,6 +1194,10 @@ h3 span, h4 span, h5 span, h6 span {
         width: 100%;
     }
 
+    .event-text{
+        padding: 20px;
+    }
+
     .event-content button{
         font-size: 13px;
     }
@@ -1207,8 +1211,11 @@ h3 span, h4 span, h5 span, h6 span {
 
 
 @media (max-width: 376px){
+    .event-text{
+        padding: 17px;
+    }
     .event-text p{
-        font-size: 13px;
+        font-size: 14px;
     }
 }
 
