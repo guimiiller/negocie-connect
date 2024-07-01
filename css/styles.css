@@ -445,7 +445,7 @@
 }
 
 .banner-text h4{
-    font-size: 15px;
+    font-size: 17px;
     color: #FFF;
     margin-top: 15px;
 }
@@ -587,7 +587,7 @@ h3 span, h4 span, h5 span, h6 span {
     .banner-text h6{
         text-align: center;
         margin-top: 25px;
-        font-size: 15px;
+        font-size: 17px;
     }
 
     .box{
@@ -639,14 +639,14 @@ h3 span, h4 span, h5 span, h6 span {
 
     .banner-text h3{
         text-align: center;
-        font-size: 16px;
+        font-size: 17px;
         line-height: 21px;
         margin-bottom: 5px;
     }
 
     .banner-text h4{
         text-align: center;
-        font-size: 15px;
+        font-size: 16px;
         margin-top: 10px;
     }
 
@@ -657,7 +657,7 @@ h3 span, h4 span, h5 span, h6 span {
 
     .banner-text h6{
         text-align: center;
-        font-size: 13px;
+        font-size: 16px;
         margin-top: 15px;
     }
 
@@ -1727,6 +1727,7 @@ h3 span, h4 span, h5 span, h6 span {
 
 @media (max-width: 426px){
     .contact-container{
+        padding-top: 50px;
         padding-bottom: 50px;
     }
     .contact-content{
@@ -1791,6 +1792,7 @@ h3 span, h4 span, h5 span, h6 span {
     justify-content: center;
     margin-top: 50px;
     flex-wrap: wrap;
+    width: 100%;
 }
 
 
@@ -1840,7 +1842,7 @@ h3 span, h4 span, h5 span, h6 span {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10px 0;
+    padding: 15px 0;
 }
 
 .social-partners a{
@@ -1923,6 +1925,7 @@ h3 span, h4 span, h5 span, h6 span {
 
 
 @media (max-width: 321px){
+    
     .call-to h2{
         font-size: 20px;
     }
