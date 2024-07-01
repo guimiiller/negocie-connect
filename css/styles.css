@@ -1182,11 +1182,12 @@ h3 span, h4 span, h5 span, h6 span {
     }
 
     .event-text h4{
-        font-size: 18px;
+        font-size: 20px;
     }
 
     .event-text p{
-        font-size: 13px;
+        font-size: 15px;
+        line-height: 24px;
     }
 
     .event-image img{
@@ -1206,11 +1207,8 @@ h3 span, h4 span, h5 span, h6 span {
 
 
 @media (max-width: 376px){
-    .event-text h4{
-        font-size: 15px;
-    }
     .event-text p{
-        font-size: 12px;
+        font-size: 13px;
     }
 }
 
