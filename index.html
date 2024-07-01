@@ -238,7 +238,7 @@
         </div>
 
         <div class="partners-cards">
-            <div  data-anime="bottom" class="partners-card"><a href="https://crowtechnology.com.br/" target="_blank"><img src="./images/crowlogo.jpeg" alt="" class="partner-img"></a><h4>CROW</h4><p>A Crow é especialista em design e desenvolvimento web. Criamos o site do Negocie Connect, proporcionando uma navegação intuitiva e uma excelente experiência de usuário.</p><div class="container-socials"><div class="social-partners"><a href="https://www.instagram.com/crowtechn/" target="_blank"><img src="./images/icons/icon-insta-w.svg" alt=""></a></div><div class="social-partners"><a href="https://crowtechnology.com.br/" target="_blank"><img src="./images/icons/icon-web-w.svg" alt=""></a></div></div></div>
+            <div  data-anime="bottom" class="partners-card"><a href="https://crowtechnology.com.br/" target="_blank"><img src="./images/crowlogo.jpeg" alt="" class="partner-img"></a><p>A Crow é uma organização especialista em web design e desenvolvimento, criando sites inovadores e personalizados para atender às necessidades dos clientes. </p><div class="container-socials"><div class="social-partners"><a href="https://www.instagram.com/crowtechn/" target="_blank"><img src="./images/icons/icon-insta-w.svg" alt=""></a></div><div class="social-partners"><a href="https://crowtechnology.com.br/" target="_blank"><img src="./images/icons/icon-web-w.svg" alt=""></a></div></div></div>
         </div>
 
         <div class="call-to" >
@@ -310,37 +310,37 @@
         }
 
         
-        async function salvarAlteracoes() {
-            const dataEventoInput = document.getElementById('dataEvento');
-            const localEventoInput = document.getElementById('localEvento');
+            async function salvarAlteracoes() {
+                const dataEventoInput = document.getElementById('dataEvento');
+                const localEventoInput = document.getElementById('localEvento');
 
-            const dataEvento = dataEventoInput.value;
-            const localEvento = localEventoInput.value;
+                const dataEvento = dataEventoInput.value;
+                const localEvento = localEventoInput.value;
 
-            try {
-                const eventoRef = doc(db, 'evento', 'informacoes');
-                await updateDoc(eventoRef, {
-                    dataEvento: dataEvento,
-                    localEvento: localEvento
-                });
+                try {
+                    const eventoRef = doc(db, 'evento', 'informacoes');
+                    await updateDoc(eventoRef, {
+                        dataEvento: dataEvento,
+                        localEvento: localEvento
+                    });
 
-                console.log('Dados do evento atualizados com sucesso!');
-                alert('Dados do evento atualizados com sucesso!');
-            } catch (error) {
-                console.error('Erro ao atualizar dados do evento:', error);
-                alert('Erro ao atualizar dados do evento. Verifique o console para mais detalhes.');
+                    console.log('Dados do evento atualizados com sucesso!');
+                    alert('Dados do evento atualizados com sucesso!');
+                } catch (error) {
+                    console.error('Erro ao atualizar dados do evento:', error);
+                    alert('Erro ao atualizar dados do evento. Verifique o console para mais detalhes.');
+                }
             }
-        }
 
-        document.addEventListener('DOMContentLoaded', () => {
-            fetchEventData();
-            fetchSpeakers();
+            document.addEventListener('DOMContentLoaded', () => {
+                fetchEventData();
+                fetchSpeakers();
+            });
+
+            document.getElementById('formEvento').addEventListener('submit', function(event) {
+                event.preventDefault();
+                salvarAlteracoes();
         });
-
-        document.getElementById('formEvento').addEventListener('submit', function(event) {
-            event.preventDefault();
-            salvarAlteracoes();
-    });
       </script>
 
     <script src="./js/script.js"></script>
