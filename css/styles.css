@@ -732,7 +732,7 @@ h3 span, h4 span, h5 span, h6 span {
 .about-title h3{
     font-size: 16px;
     color: #006494;
-    font-weight: bold;
+    font-weight: lighter;
     margin-top: 13px;
 }
 
@@ -923,7 +923,7 @@ h3 span, h4 span, h5 span, h6 span {
 .benefits-title h3 {
     font-size: 16px;
     color: #006494;
-    font-weight: bold;
+    font-weight: lighter;
     margin-top: 13px;
 }
 
@@ -960,7 +960,7 @@ h3 span, h4 span, h5 span, h6 span {
 .benefits-card p {
     font-size: 14px;
     color: #006494;
-    font-weight: bold;
+    font-weight: lighter;
 }
 
 
@@ -1034,7 +1034,7 @@ h3 span, h4 span, h5 span, h6 span {
 .event-title h3 {
     font-size: 16px;
     color: #006494;
-    font-weight: bold;
+    font-weight: lighter;
     margin-top: 13px;
 }
 
@@ -1242,7 +1242,7 @@ h3 span, h4 span, h5 span, h6 span {
 .speakers-title h3 {    
     font-size: 16px;
     color: #006494;
-    font-weight: bold;
+    font-weight: lighter;
     margin-top: 13px;
 }
 
@@ -1387,7 +1387,7 @@ h3 span, h4 span, h5 span, h6 span {
 .testimonials-title h3{
     font-size: 16px;
     color: #006494;
-    font-weight: bold;
+    font-weight: lighter;
     margin-top: 13px;
 }
 
@@ -1512,7 +1512,7 @@ h3 span, h4 span, h5 span, h6 span {
 .mentor-title h3 {    
     font-size: 16px;
     color: #006494;
-    font-weight: bold;
+    font-weight: lighter;
     margin-top: 13px;
 }
 
@@ -1539,7 +1539,7 @@ h3 span, h4 span, h5 span, h6 span {
     color: #FFF;
     font-size: 17px;
     margin: 15px 0;
-    font-weight: bold;
+    font-weight: lighter;
     line-height: 27px;
 }
 
@@ -1668,7 +1668,7 @@ h3 span, h4 span, h5 span, h6 span {
 .contact-text p{
     font-size: 16px;
     color: #fff;
-    font-weight: bold;
+    font-weight: lighter;
     margin-left: 10px;
 }
 
@@ -1739,7 +1739,7 @@ h3 span, h4 span, h5 span, h6 span {
 .partners-title h3{
     font-size: 16px;
     color: #006494;
-    font-weight: bold;
+    font-weight: lighter;
     margin-top: 13px;
     max-width: 350px;
 }
@@ -1755,9 +1755,9 @@ h3 span, h4 span, h5 span, h6 span {
 }
 
 
-.partners-card{
-    width: 300px;
-    min-height: 334px;
+.partners-card {
+    width: 320px;
+    min-height: 395px; /* Defina uma altura mínima adequada */
     background-color: #101010;
     box-shadow: 0 0 20px rgba(5, 130, 202, 0.5);
     display: flex;
@@ -1766,6 +1766,7 @@ h3 span, h4 span, h5 span, h6 span {
     flex-direction: column;
     border-radius: 20px;
     margin: 20px;
+    padding-bottom: 20px; /* Adiciona espaço extra na parte inferior */
 }
 
 .partner-img{
@@ -1789,19 +1790,25 @@ h3 span, h4 span, h5 span, h6 span {
     font-weight: bold;
 }
 
-.partners-card p{
+.partners-card p {
     color: #FFF;
-    font-size: 13px;
+    font-size: 12px;
     margin-top: 20px;
-    padding: 0 12px;
+    padding: 0 20px;
     text-align: center;
+    font-weight: lighter;
+    flex-grow: 1; /* Permite que a descrição ocupe o espaço disponível */
+    display: flex;
+    align-items: center;
 }
 
-.container-socials{
+
+.container-socials {
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 15px 0;
+    margin-top: auto; /* Move os ícones sociais para o final do cartão */
 }
 
 .social-partners a{
