@@ -1007,6 +1007,27 @@ h3 span, h4 span, h5 span, h6 span {
     z-index: 0; /* Garante que os slides não centrais fiquem atrás do central */
 }
 
+.slick-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.slick-dots li {
+    margin: 0 5px;
+}
+
+.slick-dots button {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #006494;
+}
+
+.slick-dots .slick-active button {
+    background-color: #00A6FB;
+}
+
 .slide-nav {
     position: absolute;
     top: 50%;
