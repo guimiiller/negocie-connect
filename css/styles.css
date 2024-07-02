@@ -977,7 +977,7 @@ h3 span, h4 span, h5 span, h6 span {
 
 @media (max-width: 376px) {
     .benefits-card {
-        margin: 10px;
+        margin: 5px;
     }
 }
 
@@ -1034,7 +1034,6 @@ h3 span, h4 span, h5 span, h6 span {
         display: none;
     }
 }
-
 
 .event-container{
     display: flex;
