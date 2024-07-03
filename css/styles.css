@@ -896,14 +896,13 @@ h3 span, h4 span, h5 span, h6 span {
     padding-bottom: 100px;
 }
 
-.benefits-content {
+.benefits-content{
     max-width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 70px;
     flex-wrap: wrap;
-    padding: 20px 0;
 }
 
 .benefits-title {
@@ -927,6 +926,7 @@ h3 span, h4 span, h5 span, h6 span {
     font-weight: lighter;
     margin-top: 13px;
 }
+
 
 .benefits-card {
     width: 300px;
@@ -963,69 +963,18 @@ h3 span, h4 span, h5 span, h6 span {
     font-weight: lighter;
 }
 
-@media (max-width: 1025px) {
-    .benefits-card {
-        margin: 20px;
-    }
-}
 
-@media (max-width: 769px) {
-    .benefits-card img {
-        margin-left: 90px;
-    }
-}
-
-@media (max-width: 376px) {
-    .benefits-card {
-        margin: 5px;
+@media (max-width: 1025px){
+    .benefits-card{
+        margin: 30px;
     }
 }
 
 
-.slick-slider {
-    position: relative; /* Garante que os slides estejam posicionados corretamente */
-    max-width: 100%; /* Largura máxima do contêiner do carrossel */
-    overflow: hidden; /* Garante que o conteúdo não transborde */
-
-}
-
-.slick-slide {
-    transition: transform 0.3s ease-in-out; /* Efeito de transição suave */
-    filter: brightness(0.6); /* Diminui o brilho dos slides */
-    z-index: 1; /* Garante que os slides estejam empilhados corretamente */
-}
-
-.slick-slide.slick-center {
-    transform: scale(1.2); /* Ajusta o tamanho do slide central para destacá-lo */
-    filter: brightness(1); /* Retorna o brilho ao normal para o slide central */
-    z-index: 2; /* Garante que o slide central fique na frente */
-}
-
-.slick-slide:not(.slick-center) {
-    transform: scale(0.8); /* Diminui o tamanho dos slides não centrais */
-    filter: brightness(0.6); /* Diminui o brilho dos slides não centrais */
-    z-index: 0; /* Garante que os slides não centrais fiquem atrás do central */
-}
-
-.slick-dots {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-.slick-dots li {
-    margin: 0 5px;
-}
-
-.slick-dots button {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: #006494;
-}
-
-.slick-dots .slick-active button {
-    background-color: #00A6FB;
+@media (max-width: 769px){
+    .benefits-container{
+        padding: 10px;
+    }
 }
 
 .slide-nav {
