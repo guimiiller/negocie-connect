@@ -374,7 +374,7 @@
 .banner-container{
     min-height: 100vh;
     background-image: linear-gradient(rgba(0,0,0,0.30), rgba(0,0,0,0.30)),url('../images/bg/bg1.jpg');
-    background-position: center;
+    background-position: top;
     background-size: cover;
     display: flex;
     align-items: center;
