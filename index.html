@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./images/favicon.ico" type="image/png">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css"/>
     <link rel="stylesheet" href="./css/styles.css">
@@ -149,12 +150,17 @@
             <h3 data-anime="bottom">Benefícios de Participar</h3>
             <div class="line" data-anime="bottom"></div>
         </div>
-        <div class="benefits-content">
-            <div class="benefits-card" data-anime="bottom"><img src="./images/icons/networking.png" alt=""><h3>Networking com empreendedores locais</h3><p>Junte-se a nós para uma oportunidade de networking e faça conexões valiosas com empreendedores locais!</p></div>
-            <div class="benefits-card" data-anime="bottom"><img src="./images/icons/micro.svg" alt=""><h3>Palestras inspiradoras e informativas</h3><p>Descubra ideias e insights em nossas palestras inspiradoras e informativas!</p></div>
-            <div class="benefits-card" data-anime="bottom"><img src="./images/icons/answers.svg" alt=""><h3>Sessões de perguntas e respostas com especialistas</h3><p>Interaja e aprenda em nossas sessões de perguntas e respostas com especialistas!</p></div>
-            <div class="benefits-card" data-anime="bottom"><img src="./images/icons/whats.svg" alt=""><h3>Acesso a um grupo exclusivo no WhatsApp</h3><p>Participe de um grupo exclusivo no WhatsApp e conecte-se com outros membros!</p></div>
+        <div class="benefits-content swiper-container">
+            <div class="swiper-wrapper" data-anime="bottom">
+                <div class="benefits-card swiper-slide" data-anime="bottom"><img src="./images/icons/networking.png" alt="" data-anime="bottom"><h3>Networking com empreendedores locais</h3><p>Junte-se a nós para uma oportunidade de networking e faça conexões valiosas com empreendedores locais!</p></div>
+                <div class="benefits-card swiper-slide" data-anime="bottom"><img src="./images/icons/micro.svg" alt="" data-anime="bottom"><h3>Palestras inspiradoras e informativas</h3><p>Descubra ideias e insights em nossas palestras inspiradoras e informativas!</p></div>
+                <div class="benefits-card swiper-slide" data-anime="bottom"><img src="./images/icons/answers.svg" alt="" data-anime="bottom"><h3>Sessões de perguntas e respostas com especialistas</h3><p>Interaja e aprenda em nossas sessões de perguntas e respostas com especialistas!</p></div>
+                <div class="benefits-card swiper-slide" data-anime="bottom"><img src="./images/icons/whats.svg" alt="" data-anime="bottom"><h3>Acesso a um grupo exclusivo no WhatsApp</h3><p>Participe de um grupo exclusivo no WhatsApp e conecte-se com outros membros!</p></div>
+            </div>
+            
+
         </div>
+        <div class="swiper-pagination"></div>
     </section>
 
 
@@ -400,6 +406,52 @@
                 salvarAlteracoes();
         });
       </script>
+      <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            function initializeSwiper() {
+                if (window.innerWidth <= 768) {
+                    var benefitsContent = document.querySelector('.benefits-content');
+                    
+                    // Adiciona a classe swiper-container ao benefits-content
+                    benefitsContent.classList.add('swiper-container');
+                    
+                    document.querySelectorAll('.benefits-card').forEach(card => {
+                        card.classList.add('swiper-slide');
+                    });
+    
+                    // Inicializa o Swiper
+                    var swiper = new Swiper('.swiper-container', {
+                        slidesPerView: 1, // Mostrar apenas um slide por vez
+                        spaceBetween: 0, // Espaçamento opcional entre slides
+                        loop: true,
+                        pagination: {
+                            el: '.swiper-pagination',
+                            clickable: true,
+                        },
+                        navigation: {
+                            nextEl: '.swiper-button-next',
+                            prevEl: '.swiper-button-prev',
+                        },
+                    });
+                } else {
+                    // Remove a classe swiper-container e swiper-slide do benefits-content e cards
+                    var benefitsContent = document.querySelector('.benefits-content');
+                    benefitsContent.classList.remove('swiper-container');
+                    
+                    document.querySelectorAll('.benefits-card').forEach(card => {
+                        card.classList.remove('swiper-slide');
+                    });
+                }
+            }
+    
+            // Inicializa o Swiper com base no tamanho da tela
+            initializeSwiper();
+    
+            // Adiciona um listener para redimensionamento da janela
+            window.addEventListener('resize', initializeSwiper);
+        });
+    </script>
     <script src="./js/script.js"></script>
 </body>
 </html>
