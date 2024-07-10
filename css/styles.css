@@ -893,7 +893,7 @@ h3 span, h4 span, h5 span, h6 span {
     background-image: linear-gradient(rgba(0,0,0,0.30), rgba(0,0,0,0.30)), url('../images/bg/bg2.jpg');
     background-position: center;
     background-size: cover;
-    padding-bottom: 100px;
+    padding-bottom: 50px;
 }
 
 .benefits-content{
@@ -904,13 +904,6 @@ h3 span, h4 span, h5 span, h6 span {
     margin-top: 70px;
     flex-wrap: wrap;
     overflow: hidden;
-}
-
-.swiper-container{
-    max-width: 100%;
-}
-
-.swiper-wrapper{
     padding: 20px;
 }
 
@@ -973,41 +966,9 @@ h3 span, h4 span, h5 span, h6 span {
 }
 
 
-.swiper-pagination {
-    position: relative;
-    margin-top: 10px; /* Ajuste conforme necessário */
-    text-align: center;
-}
-
-.swiper-pagination-bullet {
-    background: #000; /* Cor das bolinhas */
-    opacity: 0.5;
-    margin: 0 5px; /* Ajuste conforme necessário */
-    width: 10px;
-    height: 10px;
-}
-
-.swiper-pagination-bullet-active {
-    background: #007aff; /* Cor da bolinha ativa */
-    opacity: 1;
-}
-
-/* Adicionando altura e largura fixas para o Swiper Container */
-.benefits-content.swiper-container {
-    position: relative;
-    height: auto; /* Defina uma altura fixa conforme necessário */
-}
-
-
-@media (max-width: 769px){
-
+@media(max-width: 769px){
     .benefits-card{
-        margin: 0;
-        padding: 0 30px;
-    }
-    
-    .swiper-container{
-        max-width: 100%;
+        margin: 10px;
     }
 }
 
