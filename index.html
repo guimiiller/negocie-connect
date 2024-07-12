@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./images/favicon.ico" type="image/png">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="./css/styles.css">
     <title>NEGOCIE CONNECT - Conectando Empreendedores</title>
     <!-- Primary Meta Tags -->
@@ -142,18 +141,38 @@
         </div>
     </section>
 
-
     <section class="benefits-container">
         <div class="benefits-title">
             <h2 data-anime="bottom">POR QUE PARTICIPAR?</h2>
             <h3 data-anime="bottom">Benefícios de Participar</h3>
             <div class="line" data-anime="bottom"></div>
         </div>
-        <div class="benefits-content">
-            <div class="benefits-card" data-anime="bottom"><img src="./images/icons/networking.png" alt=""><h3>Networking com empreendedores locais</h3><p>Junte-se a nós para uma oportunidade de networking e faça conexões valiosas com empreendedores locais!</p></div>
-            <div class="benefits-card" data-anime="bottom"><img src="./images/icons/micro.svg" alt=""><h3>Palestras inspiradoras e informativas</h3><p>Descubra ideias e insights em nossas palestras inspiradoras e informativas!</p></div>
-            <div class="benefits-card" data-anime="bottom"><img src="./images/icons/answers.svg" alt=""><h3>Sessões de perguntas e respostas com especialistas</h3><p>Interaja e aprenda em nossas sessões de perguntas e respostas com especialistas!</p></div>
-            <div class="benefits-card" data-anime="bottom"><img src="./images/icons/whats.svg" alt=""><h3>Acesso a um grupo exclusivo no WhatsApp</h3><p>Participe de um grupo exclusivo no WhatsApp e conecte-se com outros membros!</p></div>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="card-item swiper-slide" data-anime="bottom">
+                    <img src="./images/icons/networking.png" alt="">
+                    <h3>Networking com empreendedores locais</h3>
+                    <p>Junte-se a nós para uma oportunidade de networking e faça conexões valiosas com empreendedores locais!</p>
+                </div>
+                <div class="card-item swiper-slide" data-anime="bottom">
+                    <img src="./images/icons/micro.svg" alt="">
+                    <h3>Palestras inspiradoras e informativas</h3>
+                    <p>Descubra ideias e insights em nossas palestras inspiradoras e informativas!</p>
+                </div>
+                <div class="card-item swiper-slide" data-anime="bottom">
+                    <img src="./images/icons/answers.svg" alt="">
+                    <h3>Sessões de perguntas e respostas com especialistas</h3>
+                    <p>Interaja e aprenda em nossas sessões de perguntas e respostas com especialistas!</p>
+                </div>
+                <div class="card-item swiper-slide" data-anime="bottom">
+                    <img src="./images/icons/whats.svg" alt="">
+                    <h3>Acesso a um grupo exclusivo no WhatsApp</h3>
+                    <p>Participe de um grupo exclusivo no WhatsApp e conecte-se com outros membros!</p>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
         </div>
     </section>
 
@@ -400,6 +419,7 @@
                 salvarAlteracoes();
         });
       </script>
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./js/script.js"></script>
 </body>
 </html>

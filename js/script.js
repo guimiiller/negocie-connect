@@ -52,3 +52,47 @@ window.addEventListener('scroll', function(){
 })
 /* SCROLL */
 
+
+
+let swiper = null; // Variável global para armazenar a instância do Swiper
+
+// Função para inicializar ou destruir o Swiper conforme a largura da tela
+function initSwiper() {
+    if (window.innerWidth < 769 && swiper === null) {
+        // Inicializa o Swiper apenas em telas menores que 769px
+        swiper = new Swiper('.swiper-container', {
+            grabCursor: true,
+            spaceBetween: 10,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+                dynamicBullets: true
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            slidesPerView: 1, // Define o número de slides visíveis
+            breakpoints: {
+                769: {
+                    slidesPerView: 2,
+                },
+                1024: {
+                    slidesPerView: 3,
+                }
+            }
+        });
+    } else if (window.innerWidth >= 769 && swiper !== null) {
+        // Destrói o Swiper se a tela for maior ou igual a 769px
+        swiper.destroy();
+        swiper = null;
+    }
+}
+
+// Chama a função inicialmente ao carregar a página
+initSwiper();
+
+// Chama a função sempre que a largura da tela for alterada
+window.addEventListener('resize', () => {
+    initSwiper();
+});

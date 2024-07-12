@@ -896,15 +896,17 @@ h3 span, h4 span, h5 span, h6 span {
     padding-bottom: 50px;
 }
 
-.benefits-content{
-    max-width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 70px;
-    flex-wrap: wrap;
+.swiper-container {
+    width: 100%;
+    max-width: 1400px;
     overflow: hidden;
+    margin-top: 80px;
+}
+
+.swiper-wrapper {
+    display: flex;
     padding: 20px;
+    width: 100%;
 }
 
 .benefits-title {
@@ -929,11 +931,10 @@ h3 span, h4 span, h5 span, h6 span {
     margin-top: 13px;
 }
 
-
-.benefits-card {
-    width: 300px;
-    height: 358px;
-    margin: 0 30px;
+.card-item {
+    width: calc(100% - 30px);
+    max-width: 315px;
+    height: 400px;
     background-color: #101010;
     border-radius: 20px;
     box-shadow: 0 0 20px rgba(5, 130, 202, 0.5);
@@ -942,33 +943,112 @@ h3 span, h4 span, h5 span, h6 span {
     justify-content: flex-start;
     text-align: center;
     flex-direction: column;
-    padding: 0 28px;
+    padding: 35px;
     transition: transform 0.5s ease-in-out;
+    margin: 0 15px;
 }
 
-.benefits-card img {
+.card-item img {
     width: 60px;
     height: 60px;
     margin-top: 43px;
 }
 
-.benefits-card h3 {
+.card-item h3 {
     color: #FFF;
     font-size: 17px;
     font-weight: bold;
     margin: 30px 0 26px 0;
 }
 
-.benefits-card p {
+.card-item p {
     font-size: 14px;
     color: #006494;
     font-weight: lighter;
 }
 
+.swiper-pagination {
+    position: relative;
+    margin-top: 30px;
+    text-align: center;
+}
 
-@media(max-width: 769px){
-    .benefits-card{
-        margin: 10px;
+.swiper-pagination-bullet {
+    background: #fff; /* Cor das bolinhas */
+    opacity: 0.5;
+    margin: 0 5px; /* Ajuste conforme necessário */
+}
+
+.swiper-pagination-bullet-active {
+    background: #007aff; /* Cor da bolinha ativa */
+    opacity: 1;
+}
+
+.swiper-button-prev, .swiper-button-next {
+    color: #007aff;
+}
+
+@media (max-width: 769px) {
+    .swiper-container {
+        padding: 0 20px; /* Adicione um espaçamento lateral para evitar cortes */
+    }
+    .swiper-wrapper{
+        padding: 10px 0;
+    }
+
+    .swiper-slide {
+        width: auto !important; /* Garante que os slides tenham largura automática */
+    }
+
+    .card-item {
+        width: 100% !important; /* Faz com que os cards ocupem 100% da largura disponível */
+        max-width: calc(100% - 20px) !important; /* Ajusta a largura máxima do card */
+        height: auto !important; /* Altura automática para se ajustar ao conteúdo */
+        margin: 0 10px !important; /* Reduz a margem para melhor ajuste */
+        padding: 25px !important; /* Mantém o padding padrão para conteúdo */
+    }
+}
+
+@media(max-width: 426px){
+    .card-item img {
+        width: 55px;
+        height: 55px;
+        margin-top: 20px;
+    }
+    
+    .card-item h3 {
+        color: #FFF;
+        font-size: 15px;
+        font-weight: bold;
+        margin: 30px 0 26px 0;
+    }
+    
+    .card-item p {
+        font-size: 13px;
+        color: #006494;
+        font-weight: lighter;
+    }
+    
+}
+
+@media(max-width: 321px){
+    .card-item img {
+        width: 50px;
+        height: 50px;
+        margin-top: 20px;
+    }
+    
+    .card-item h3 {
+        color: #FFF;
+        font-size: 13px;
+        font-weight: bold;
+        margin: 30px 0 26px 0;
+    }
+    
+    .card-item p {
+        font-size: 12px;
+        color: #006494;
+        font-weight: lighter;
     }
 }
 
