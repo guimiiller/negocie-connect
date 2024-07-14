@@ -734,6 +734,7 @@ h3 span, h4 span, h5 span, h6 span {
     color: #006494;
     font-weight: lighter;
     margin-top: 13px;
+    padding: 0 15px;
 }
 
 .line{
@@ -902,6 +903,8 @@ h3 span, h4 span, h5 span, h6 span {
     max-width: 1400px;
     overflow: hidden;
     margin-top: 80px;
+    
+    position: relative; /* Adicione position: relative para posicionamento dos botões */
 }
 
 .swiper-wrapper {
@@ -930,6 +933,7 @@ h3 span, h4 span, h5 span, h6 span {
     color: #006494;
     font-weight: lighter;
     margin-top: 13px;
+    padding: 0 15px;
 }
 
 .card-item {
@@ -974,19 +978,43 @@ h3 span, h4 span, h5 span, h6 span {
     text-align: center;
 }
 
-.swiper-pagination-bullet {
-    background: #fff; /* Cor das bolinhas */
-    opacity: 0.5;
-    margin: 0 5px; /* Ajuste conforme necessário */
-}
-
-.swiper-pagination-bullet-active {
-    background: #007aff; /* Cor da bolinha ativa */
-    opacity: 1;
-}
-
 .swiper-button-prev, .swiper-button-next {
-    color: #007aff;
+    color: #00A6FB;
+    width: 25px; /* Ajuste a largura do botão */
+    height: 25px; /* Ajuste a altura do botão */
+    font-size: 15px; /* Ajuste o tamanho da fonte do ícone */
+    background-size: 10px 10px; /* Ajuste o tamanho do ícone dentro do botão */
+    background-color: #000; /* Adicione um fundo semitransparente para melhor visualização */
+    border-radius: 50%; /* Torne os botões redondos */
+    display: flex; /* Centralize o ícone dentro do botão */
+    align-items: center; /* Centralize o ícone verticalmente */
+    justify-content: center; /* Centralize o ícone horizontalmente */
+    position: absolute; /* Para posicionamento relativo ao swiper-container */
+    top: 50%; /* Centralize verticalmente */
+    transform: translateY(-50%); /* Ajuste o posicionamento vertical */
+    z-index: 10; /* Garanta que os botões fiquem acima do conteúdo */
+}
+
+/* Ajuste a posição dos botões */
+.swiper-button-prev {
+    left: 10px; /* Ajuste a posição à esquerda */
+}
+
+.swiper-button-next {
+    right: 10px; /* Ajuste a posição à direita */
+}
+
+.swiper-button-prev::after, .swiper-button-next::after {
+    font-size: 15px; /* Ajuste o tamanho do ícone */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (min-width: 769px) {
+    .swiper-button-prev, .swiper-button-next {
+        display: none;
+    }
 }
 
 @media (max-width: 769px) {
@@ -1004,13 +1032,17 @@ h3 span, h4 span, h5 span, h6 span {
     .card-item {
         width: 100% !important; /* Faz com que os cards ocupem 100% da largura disponível */
         max-width: calc(100% - 20px) !important; /* Ajusta a largura máxima do card */
-        height: auto !important; /* Altura automática para se ajustar ao conteúdo */
+        height: 310px !important; /* Altura automática para se ajustar ao conteúdo */
         margin: 0 10px !important; /* Reduz a margem para melhor ajuste */
         padding: 25px !important; /* Mantém o padding padrão para conteúdo */
     }
 }
 
 @media(max-width: 426px){
+    .card-item{
+        height: 500px;
+    }
+
     .card-item img {
         width: 55px;
         height: 55px;
@@ -1111,6 +1143,7 @@ h3 span, h4 span, h5 span, h6 span {
     color: #006494;
     font-weight: lighter;
     margin-top: 13px;
+    padding: 0 15px;
 }
 
 
@@ -1320,6 +1353,7 @@ h3 span, h4 span, h5 span, h6 span {
     color: #006494;
     font-weight: lighter;
     margin-top: 13px;
+    padding: 0 15px;
 }
 
 
@@ -1465,6 +1499,7 @@ h3 span, h4 span, h5 span, h6 span {
     color: #006494;
     font-weight: lighter;
     margin-top: 13px;
+    padding: 0 15px;
 }
 
 
@@ -1590,6 +1625,7 @@ h3 span, h4 span, h5 span, h6 span {
     color: #006494;
     font-weight: lighter;
     margin-top: 13px;
+    padding: 0 15px;
 }
 
 .mentor-text{
@@ -1785,19 +1821,19 @@ h3 span, h4 span, h5 span, h6 span {
 }
 
 
-.partners-container{
+.partners-container {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: #0b111d;
-    padding-bottom: 40px;
-    background-image: linear-gradient(rgba(0,0,0,0.40), rgba(0,0,0,0.40)), url('../images/bg/bg3.jpg');
-    background-position: bottom;
+    background-image: linear-gradient(rgba(0,0,0,0.30), rgba(0,0,0,0.30)), url('../images/bg/bg3.jpg');
+    background-position: center;
     background-size: cover;
+    padding-bottom: 50px;
 }
 
-.partners-title{
+
+.partners-title {
     text-align: center;
     display: flex;
     align-items: center;
@@ -1806,34 +1842,39 @@ h3 span, h4 span, h5 span, h6 span {
     margin-top: 54px;
 }
 
-.partners-title h2{
+.partners-title h2 {
     font-size: 25px;
     color: #00A6FB;
     font-weight: 100;
 }
 
-.partners-title h3{
+.partners-title h3 {
     font-size: 16px;
     color: #006494;
     font-weight: lighter;
     margin-top: 13px;
-    max-width: 350px;
+    padding: 0 15px;
 }
 
+.swiper-container {
+    width: 100%;
+    max-width: 1400px;
+    overflow: hidden;
+    margin-top: 80px;
+    margin-left: 100px;
+    position: relative; /* Adicione position: relative para posicionamento dos botões */
+}
 
-.partners-cards{
+.partners-card .swiper-wrapper {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 50px;
-    flex-wrap: wrap;
+    padding: 15px;
     width: 100%;
 }
 
-
 .partners-card {
-    width: 320px;
-    min-height: 395px; /* Defina uma altura mínima adequada */
+    width: calc(100% - 30px);
+    max-width: 390px;
+    min-height: 400px;
     background-color: #101010;
     box-shadow: 0 0 20px rgba(5, 130, 202, 0.5);
     display: flex;
@@ -1842,65 +1883,76 @@ h3 span, h4 span, h5 span, h6 span {
     flex-direction: column;
     border-radius: 20px;
     margin: 20px;
-    padding-bottom: 20px; /* Adiciona espaço extra na parte inferior */
+    padding: 0 22px;
+    text-align: center;
 }
 
-.partner-img{
-    width: 78px;
-    height: 78px;
+.partner-img {
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     object-fit: cover;
-    border: 1px solid #0582CA;
-    margin-top: 30px;
-    margin-bottom: 15px;
+    border: 1px solid #007aff;
+    padding: 2px;
+    margin-top: 43px;
+    
     transition: transform .3s;
 }
 
 .partner-img:hover{
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
-.partners-card h4{
+.partners-card h4 {
     color: #0582CA;
-    font-size: 15px;
+    font-size: 17px;
     font-weight: bold;
+    margin: 30px 0 26px 0;
 }
 
 .partners-card p {
-    color: #FFF;
-    font-size: 12px;
-    margin-top: 20px;
-    padding: 0 20px;
-    text-align: center;
+    font-size: 13px;
+    color: #fff;
     font-weight: lighter;
-    flex-grow: 1; /* Permite que a descrição ocupe o espaço disponível */
-    display: flex;
-    align-items: center;
 }
 
 
 .container-socials {
     display: flex;
-    align-items: center;
     justify-content: center;
-    padding: 15px 0;
-    margin-top: auto; /* Move os ícones sociais para o final do cartão */
+    margin-top: 30px;
 }
 
 .social-partners a{
-    width: 40px;
-    height: 40px;
-    background-color: #0582CA;
-    border-radius: 50%;
+    margin: 0 10px;
+    background-color: #00A6FB;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 20px 10px 0 10px;
+    border-radius: 50%;
+    padding: 10px;
     transition: transform .3s;
 }
 
 .social-partners a:hover{
-    transform: scale(1.1);
+    transform: scale(1.05);
+}
+
+.swiper-pagination {
+    position: relative;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.swiper-pagination-bullet {
+    background: #fff; /* Cor das bolinhas */
+    opacity: 0.5;
+    margin: 0 5px; /* Ajuste conforme necessário */
+}
+
+.swiper-pagination-bullet-active {
+    background: #007aff; /* Cor da bolinha ativa */
+    opacity: 1;
 }
 
 .call-to{
@@ -1947,7 +1999,32 @@ h3 span, h4 span, h5 span, h6 span {
 }
 
 
+@media (max-width: 769px) {
+    .swiper-container {
+        padding: 0 20px; /* Adicione um espaçamento lateral para evitar cortes */
+        margin-left: 0;
+    }
+    .swiper-wrapper {
+        padding: 10px 0;
+    }
+
+    .swiper-slide {
+        width: auto !important; /* Garante que os slides tenham largura automática */
+    }
+
+    .partners-card {
+        width: 100% !important; /* Faz com que os cards ocupem 100% da largura disponível */
+        max-width: calc(100% - 20px) !important; /* Ajusta a largura máxima do card */
+        height: 200px !important; /* Altura automática para se ajustar ao conteúdo */
+        margin: 0 10px !important; /* Reduz a margem para melhor ajuste */
+        padding: 25px !important; /* Mantém o padding padrão para conteúdo */
+    }
+}
+
+
+
 @media (max-width: 426px){
+    
     .partners-container{
         padding-bottom: 80px;
     }
@@ -1963,10 +2040,33 @@ h3 span, h4 span, h5 span, h6 span {
         
         padding: 0 10px;
     }
+    .partner-img {
+        width: 75px;
+        height: 75px;
+        margin-top: 20px;
+    }
+    
+    .partners-card h4 {
+        color: #007aff;
+        font-size: 14px;
+        font-weight: bold;
+        margin: 30px 0 26px 0;
+    }
+    
+    .partners-card p {
+        font-size: 12px;
+        color: #fff;
+        font-weight: lighter;
+    }
 }
 
 
 @media (max-width: 321px){
+    .partner-img {
+        width: 70px;
+        height: 70px;
+    }
+
     
     .call-to h2{
         font-size: 20px;
