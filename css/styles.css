@@ -909,7 +909,6 @@ h3 span, h4 span, h5 span, h6 span {
 
 .swiper-wrapper {
     display: flex;
-    padding: 20px;
     width: 100%;
 }
 
@@ -1858,10 +1857,9 @@ h3 span, h4 span, h5 span, h6 span {
 
 .swiper-container {
     width: 100%;
-    max-width: 1400px;
+    max-width: 1300px;
     overflow: hidden;
     margin-top: 80px;
-    margin-left: 100px;
     position: relative; /* Adicione position: relative para posicionamento dos botões */
 }
 
@@ -1870,7 +1868,6 @@ h3 span, h4 span, h5 span, h6 span {
     padding: 15px;
     width: 100%;
 }
-
 .partners-card {
     width: calc(100% - 30px);
     max-width: 390px;
