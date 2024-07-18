@@ -12,7 +12,9 @@
     font-style: normal;
 }
 
-
+html{
+ background-color: #0b111d;
+}
 
 .header-large {
     position: absolute;
