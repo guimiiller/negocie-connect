@@ -140,3 +140,43 @@ initSwiperPartners();
 window.addEventListener('resize', () => {
     initSwiperPartners();
 });
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const slider = document.querySelector('.testimonials-slider');
+    const slides = document.querySelectorAll('.testimonials-card');
+    let currentSlide = 1; // Começa no segundo slide para destacar o do meio
+    const totalSlides = slides.length;
+
+    // Função para atualizar o slide ativo e mover o contêiner
+    function updateSlides() {
+        const offset = -(currentSlide - 1) * (100 / 3); // Ajusta a posição para o card central
+        slider.style.transform = `translateX(${offset}%)`; // Move o slider para a posição
+
+        slides.forEach((slide, index) => {
+            slide.classList.remove('active');
+            slide.style.opacity = '0.5'; // Restaura a opacidade de todos os slides
+            slide.style.transform = 'scale(0.9)'; // Reduz o tamanho dos slides não ativos
+
+            if (index === currentSlide) {
+                slide.classList.add('active'); // Adiciona a classe ativa ao slide central
+                slide.style.opacity = '1'; // Destaca o slide ativo
+                slide.style.transform = 'scale(1)'; // Tamanho normal do slide ativo
+            }
+        });
+    }
+
+    // Botão de próximo slide
+    document.getElementById('next-btn').addEventListener('click', () => {
+        currentSlide = (currentSlide + 1) % totalSlides; // Vai para o próximo slide
+        updateSlides();
+    });
+
+    // Botão de slide anterior
+    document.getElementById('prev-btn').addEventListener('click', () => {
+        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides; // Vai para o slide anterior
+        updateSlides();
+    });
+
+    updateSlides(); // Atualiza os slides ao carregar a página
+});
