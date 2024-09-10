@@ -180,3 +180,54 @@ document.addEventListener('DOMContentLoaded', () => {
 
     updateSlides(); // Atualiza os slides ao carregar a página
 });
+
+let slideIndex = 0;
+
+function showSlide(index) {
+    const slides = document.querySelectorAll('.about-image-slide');
+    const dots = document.querySelectorAll('.dot');
+
+    if (index >= slides.length) slideIndex = 0;
+    if (index < 0) slideIndex = slides.length - 1;
+
+    slides.forEach((slide, i) => {
+        slide.style.display = i === slideIndex ? 'block' : 'none';
+    });
+
+    dots.forEach((dot, i) => {
+        dot.className = dot.className.replace(' active', '');
+        if (i === slideIndex) dot.className += ' active';
+    });
+}
+
+function nextSlide() {
+    showSlide(++slideIndex);
+}
+
+function prevSlide() {
+    showSlide(--slideIndex);
+}
+
+function currentSlide(index) {
+    showSlide(slideIndex = index);
+}
+
+// Inicialize o slider mostrando o primeiro slide
+showSlide(slideIndex);
+
+// Adicione pontos de navegação dinamicamente
+const slides = document.querySelectorAll('.about-image-slide');
+const dotsContainer = document.querySelector('.dots');
+
+slides.forEach((_, i) => {
+    const dot = document.createElement('span');
+    dot.className = 'dot';
+    dot.addEventListener('click', () => currentSlide(i));
+    dotsContainer.appendChild(dot);
+});
+
+// Define o primeiro ponto como ativo
+const dots = document.querySelectorAll('.dot');
+if (dots.length > 0) {
+    dots[0].classList.add('active');
+}
