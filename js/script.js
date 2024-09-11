@@ -187,13 +187,16 @@ function showSlide(index) {
     const slides = document.querySelectorAll('.about-image-slide');
     const dots = document.querySelectorAll('.dot');
 
+    // Verifica o índice e ajusta para não ultrapassar o número de slides
     if (index >= slides.length) slideIndex = 0;
     if (index < 0) slideIndex = slides.length - 1;
 
+    // Exibe apenas o slide ativo
     slides.forEach((slide, i) => {
         slide.style.display = i === slideIndex ? 'block' : 'none';
     });
 
+    // Define o ponto ativo
     dots.forEach((dot, i) => {
         dot.className = dot.className.replace(' active', '');
         if (i === slideIndex) dot.className += ' active';
@@ -201,32 +204,32 @@ function showSlide(index) {
 }
 
 function nextSlide() {
-    showSlide(++slideIndex);
+    showSlide(++slideIndex);  // Incrementa o índice e exibe o próximo slide
 }
 
 function prevSlide() {
-    showSlide(--slideIndex);
+    showSlide(--slideIndex);  // Decrementa o índice e exibe o slide anterior
 }
 
 function currentSlide(index) {
-    showSlide(slideIndex = index);
+    showSlide(slideIndex = index);  // Define o slide atual
 }
 
-// Inicialize o slider mostrando o primeiro slide
+// Inicializa o slider mostrando o primeiro slide
 showSlide(slideIndex);
 
-// Adicione pontos de navegação dinamicamente
+// Adiciona os pontos de navegação dinamicamente com base nos slides
 const slides = document.querySelectorAll('.about-image-slide');
 const dotsContainer = document.querySelector('.dots');
 
 slides.forEach((_, i) => {
     const dot = document.createElement('span');
     dot.className = 'dot';
-    dot.addEventListener('click', () => currentSlide(i));
+    dot.addEventListener('click', () => currentSlide(i));  // Adiciona evento de clique ao ponto
     dotsContainer.appendChild(dot);
 });
 
-// Define o primeiro ponto como ativo
+// Define o primeiro ponto como ativo ao iniciar
 const dots = document.querySelectorAll('.dot');
 if (dots.length > 0) {
     dots[0].classList.add('active');
