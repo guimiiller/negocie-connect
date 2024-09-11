@@ -182,21 +182,19 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 let slideIndex = 0;
+let startX;
 
 function showSlide(index) {
     const slides = document.querySelectorAll('.about-image-slide');
     const dots = document.querySelectorAll('.dot');
 
-    // Verifica o índice e ajusta para não ultrapassar o número de slides
     if (index >= slides.length) slideIndex = 0;
     if (index < 0) slideIndex = slides.length - 1;
 
-    // Exibe apenas o slide ativo
     slides.forEach((slide, i) => {
         slide.style.display = i === slideIndex ? 'block' : 'none';
     });
 
-    // Define o ponto ativo
     dots.forEach((dot, i) => {
         dot.className = dot.className.replace(' active', '');
         if (i === slideIndex) dot.className += ' active';
@@ -204,33 +202,56 @@ function showSlide(index) {
 }
 
 function nextSlide() {
-    showSlide(++slideIndex);  // Incrementa o índice e exibe o próximo slide
+    showSlide(++slideIndex);
 }
 
 function prevSlide() {
-    showSlide(--slideIndex);  // Decrementa o índice e exibe o slide anterior
+    showSlide(--slideIndex);
 }
 
 function currentSlide(index) {
-    showSlide(slideIndex = index);  // Define o slide atual
+    showSlide(slideIndex = index);
 }
 
 // Inicializa o slider mostrando o primeiro slide
 showSlide(slideIndex);
 
-// Adiciona os pontos de navegação dinamicamente com base nos slides
+// Adicione pontos de navegação dinamicamente
 const slides = document.querySelectorAll('.about-image-slide');
 const dotsContainer = document.querySelector('.dots');
 
 slides.forEach((_, i) => {
     const dot = document.createElement('span');
     dot.className = 'dot';
-    dot.addEventListener('click', () => currentSlide(i));  // Adiciona evento de clique ao ponto
+    dot.addEventListener('click', () => currentSlide(i));
     dotsContainer.appendChild(dot);
 });
 
-// Define o primeiro ponto como ativo ao iniciar
+// Define o primeiro ponto como ativo
 const dots = document.querySelectorAll('.dot');
 if (dots.length > 0) {
     dots[0].classList.add('active');
+}
+
+// Eventos para detectar o toque e realizar o swipe
+slides.forEach((slide) => {
+    slide.addEventListener('touchstart', handleTouchStart, false);
+    slide.addEventListener('touchend', handleTouchEnd, false);
+});
+
+function handleTouchStart(event) {
+    startX = event.touches[0].clientX;
+}
+
+function handleTouchEnd(event) {
+    const endX = event.changedTouches[0].clientX;
+    const deltaX = endX - startX;
+
+    if (deltaX > 50) {
+        // Deslize para a direita (slide anterior)
+        prevSlide();
+    } else if (deltaX < -50) {
+        // Deslize para a esquerda (próximo slide)
+        nextSlide();
+    }
 }
