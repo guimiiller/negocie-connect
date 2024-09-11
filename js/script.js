@@ -147,6 +147,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const slides = document.querySelectorAll('.testimonials-card');
     let currentSlide = 1; // Começa no segundo slide para destacar o do meio
     const totalSlides = slides.length;
+    let startX = 0;
+    let endX = 0;
 
     // Função para atualizar o slide ativo e mover o contêiner
     function updateSlides() {
@@ -178,8 +180,31 @@ document.addEventListener('DOMContentLoaded', () => {
         updateSlides();
     });
 
+    // Funções de toque (swipe)
+    slider.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].clientX; // Captura a posição inicial do toque
+    });
+
+    slider.addEventListener('touchmove', (e) => {
+        endX = e.touches[0].clientX; // Atualiza a posição do toque durante o movimento
+    });
+
+    slider.addEventListener('touchend', () => {
+        if (startX - endX > 50) {
+            // Swipe para a esquerda (próximo slide)
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateSlides();
+        } else if (endX - startX > 50) {
+            // Swipe para a direita (slide anterior)
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            updateSlides();
+        }
+    });
+
     updateSlides(); // Atualiza os slides ao carregar a página
 });
+
+
 
 let slideIndex = 0;
 let startX;
