@@ -825,7 +825,6 @@ h3 span, h4 span, h5 span, h6 span {
 
 
 
-
 .about-image-slider {
     position: relative;
     width: 100%; /* Largura do slider */
@@ -1437,7 +1436,7 @@ h3 span, h4 span, h5 span, h6 span {
     align-items: center;
     justify-content: space-between; /* Distribute space between elements */
     max-width: 370px;
-    min-height: 530px; /* Set a minimum height */
+    min-height: 500px; /* Set a minimum height */
     border-radius: 20px;
     box-shadow: 0 0 20px rgba(5, 130, 202, 0.5);
     background-color: #101010;
