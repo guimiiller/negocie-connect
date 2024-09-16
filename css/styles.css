@@ -345,7 +345,7 @@ html{
     left: 0;
     width: 100%;
     height: 100%;
-    background: #14161D;
+    background: #0b111d;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -355,7 +355,7 @@ html{
 .loader {
     border: 2px solid #0582CA;
     border-radius: 50%;
-    border-top: 2px solid #14161D;
+    border-top: 2px solid #0b111d;
     width: 90px;
     height: 90px;
     animation: spin 2s linear infinite;
