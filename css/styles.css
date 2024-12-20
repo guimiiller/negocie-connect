@@ -61,6 +61,7 @@ html{
     display: flex;
     justify-content: center; 
     align-items: center;
+    gap: 50px;
     list-style: none;
     margin: 0; 
     padding: 0; 
@@ -78,7 +79,7 @@ html{
 
 .navigation ul li a {
     color: #fff;
-    font-size: 15px;
+    font-size: 14px;
     text-transform: uppercase;
     letter-spacing: 1px;
     transition: all 0.5s;
@@ -748,7 +749,7 @@ h3 span, h4 span, h5 span, h6 span {
 
 
 .about-content{
-    max-width: 1000px;
+    max-width: 1100px;
     width: 100%;
     background-color: #0F0F0F;
     border-radius: 20px;
@@ -758,7 +759,7 @@ h3 span, h4 span, h5 span, h6 span {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 30px;
+    padding: 25px;
 }
 
 
@@ -770,7 +771,7 @@ h3 span, h4 span, h5 span, h6 span {
 
 
 .about-text{
-    max-width: 388px;
+    max-width: 400px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -801,6 +802,7 @@ h3 span, h4 span, h5 span, h6 span {
     line-height: 20px;
     margin-top: 10px;
     margin-bottom: 15px;
+    text-align: center;
 }
 
 
@@ -814,7 +816,7 @@ h3 span, h4 span, h5 span, h6 span {
     background-color: #0582CA;
     border: none;
     border-radius: 5px;
-    margin: 20px 0 0 460px;
+    margin: 0 0 20px 495px;
     transition: box-shadow 0.3s ease; 
     cursor: pointer;
 }
@@ -828,7 +830,7 @@ h3 span, h4 span, h5 span, h6 span {
 .about-image-slider {
     position: relative;
     width: 100%; /* Largura do slider */
-    height: 390px; /* Altura do slider */
+    height: 500px; /* Altura do slider */
     overflow: hidden;
     margin-top: 50px;
     border-radius: 10px; /* Adicionando borda arredondada opcional */
@@ -850,7 +852,7 @@ h3 span, h4 span, h5 span, h6 span {
   
 .about-image-slide img {
     width: 400px;
-    height: 450px;
+    height: 500px;
     object-fit: cover;
     display: block;
 }
